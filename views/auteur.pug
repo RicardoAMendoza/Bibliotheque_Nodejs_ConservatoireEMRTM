@@ -1,0 +1,86 @@
+//-ConservatoireEMRTM.
+//-Langage de programmation : nodeJS (l'installation du framework Express est requis).
+//-Version 0.1
+//-Original author: Andy Del Risco & Ricardo Mendoza
+//-Released with the MIT License: http://www.opensource.org/licenses/mit-license.php
+//-Copyright (c) 2018 Andy Del Risco and Ricardo Mendoza
+//-Hiver-2018
+
+//-Begin ModalAuteur
+.block-edit.modal.fade#blockAuteur
+  .modal-dialog.modal-lg.modal-dialog-centered
+          .modal-content#ModalAuteur
+            .modal-header
+              button.close(type="button",data-dismiss="modal") 
+                     span(aria-hidden="true") &times;
+                     span.sr-only Close
+              h3#auteurTitle.modal-title Auteurs
+            .modal-body
+            .container-fluid
+              .row
+                  .table#tbaut_Result
+                    table#tableAut.table.table-hover.table-striped.table-bordered.table-responsive.display
+                      thead
+                        tr
+                          th#tbautId ID
+                          th#tbautNom Nom
+                          th#tbautPrenom Prenom
+                          th.hide
+                      tbody#tbodyautResult
+                      a &nbsp; &nbsp; &nbsp;    
+              .row
+                .col-md-4
+                  .form-inline
+                    .form-group
+                      a &nbsp; &nbsp; &nbsp;
+                      label#lblautId ID :
+                  .form-inline
+                    .form-group
+                      a &nbsp; &nbsp; &nbsp;
+                      input.form-control#txtautId(type="number", style='width: 200px;') 
+                .col-md-4
+                  .form-inline
+                    .form-group
+                      a &nbsp; &nbsp;
+                      label#lblautNom Nom :
+                  .form-inline
+                    .form-group
+                      a &nbsp; &nbsp;
+                      input.form-control#txtautNom(type="text", style='width: 200px;') 
+                .col-md-4
+                  .form-inline
+                    .form-group
+                      label#lblautPrenom Prenom :
+                  .form-inline
+                    .form-group
+                      input.form-control#txtautPrenom(type="text", style='width: 200px;') 
+              hr
+            //-Modal Auteur
+            .modal-footer
+                .container
+                  .row
+                    .col-md-4
+                      .form-inline
+                        .form-group
+                          a &nbsp; &nbsp; &nbsp; &nbsp;
+                          button#btnautNouveau.btn.btn-info(onclick="clairtxtBoxAut()", type="button", style='width: 150px;') Nouveau
+                          a &nbsp; &nbsp; &nbsp; &nbsp;
+                          button#btnautSup.btn.btn-info(type="button",style='width: 150px;', onclick="supprimerAuteur()") Supprimer
+                    .col-md-4
+                      .form-inline
+                        .form-group
+                          a &nbsp; &nbsp; &nbsp; &nbsp;
+                          button#btnautSave.btn.btn-info(type="button",style='width: 150px;', onclick="enregistrerAuteur()") Enregistrer
+                          a &nbsp; &nbsp; &nbsp; &nbsp;
+                          button#btnautFermer.btn.btn-info(type="button",data-dismiss="modal", style='width: 150px;') Fermer     
+                  .row   
+                    a &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;     
+                  .row 
+                    .col-md-4
+                      .form-inline
+                        .form-group
+                          input#chBautLoop(type="checkbox")
+                          a &nbsp; &nbsp; &nbsp;
+                          label#lblautLoop Enregistrer et continuer une nouvelle saisie.
+                    .col-md-4
+                    //-champ bide

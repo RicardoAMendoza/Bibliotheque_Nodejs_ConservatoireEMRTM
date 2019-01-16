@@ -1,0 +1,142 @@
+#%RAML 1.0
+---
+title: Projet Session INF4375
+baseUri: http://localhost:3000
+version: 1
+
+
+/installations?{arrondissement}:
+  get:
+    description: obtenir la liste des installations pour un arrondissement spécifié en paramètre.
+    URL exemple: http://localhost:3000/installations?arrondissement=LaSalle
+    responses:
+      200:
+        description: retourne un objet JSON avec les installations d'un arrondissement spécifié.
+        body:
+          application/json:
+          schema: !include ../schemas/get-all-installations-par-arr.json
+      404:
+        description: la ressource n'existe pas ou n'est pas disponible.
+      500:
+        description: une erreur interne s'est produite. L'erreur a été signalée à l'équipe de développement.
+
+
+/nom-installation:
+  /{nom}:
+    get:
+      description: Service qui permet de retourner les information des installation.
+      URL exemple: http://localhost:3000/nom_installation?nom=Parc%20Haymard
+      responses:
+        200:
+          description: retourne les installations par nom d'installation comme paramètre.
+          body:
+            application/json:
+            schema: !include ../schemas/get-installation-par-nom.json
+        500:
+          description: une erreur interne s'est produite. L'erreur a été signalée à l'équipe de développement.
+
+
+/all-installations:
+  get:
+    description: obtenir la liste de toutes les installations (sans doublons).
+    responses:
+      200:
+        description: toutes les installations sans doublons.
+        body:
+          application/json:
+          schema: !include ../schemas/get-name-all-installations.json
+      500:
+        description: une erreur interne s'est produite. L'erreur a été signalée à l'équipe de développement.
+
+
+/installations-mauvaise-condition:
+  get:
+    description: obtenir les installations en mauvaises conditions en format JSON.
+    responses:
+      200:
+        description: installations en mauvaises conditions.
+        body:
+          application/json:
+          schema: !include ../schemas/get-installation-par-nom.json
+      500:
+        description: une erreur interne s'est produite. L'erreur a été signalée à l'équipe de développement.
+
+  /xml:
+    get:
+      description: obtenir les installations en mauvaises conditions en format XML.
+      responses:
+        200:
+          description: "installations en mauvaises conditions en format XML."
+          body:
+            application/json:
+            schema: !include ../schemas/get-installation-par-nom.json
+        500:
+          description: une erreur interne s'est produite. L'erreur a été signalée à l'équipe de développement.
+  /csv:
+    get:
+      description: obtenir les installations en mauvaises conditions en format CSV.
+      responses:
+        200:
+          description: installations en mauvaises conditions en format CSV.
+          body:
+            application/json:
+            schema: !include ../schemas/get-installation-par-nom.json
+        500:
+          description: une erreur interne s'est produite. L'erreur a été signalée à l'équipe de développement.
+
+
+/update-glissade:
+  /{id}:
+    patch:
+      description: mettre à jour les informations d'une glissade selon son identifiant.
+      body:
+        application/json:
+        schema: !include ../schemas/update-glissade.json
+      responses:
+        200:
+          description: l'installation a été modifiée.
+        404:
+          description: l'identifiant spécifié n'existe pas.
+        500:
+          description: une erreur interne s'est produite. L'erreur a été signalée à l'équipe de développement.      
+
+
+/supprimer-glissade:
+  /{id}:
+    delete:
+      description: supprimer une glissade selon son identifiant.
+      responses:
+        200:
+          description: l'installation a été supprimée.
+        404:
+          description: l'identifiant spécifié n'existe pas.
+        500:
+          description: une erreur interne s'est produite. L'erreur a été signalée à l'équipe de développement.        
+
+/update-piscine:
+  /{id}:
+    patch:
+      description: mettre à jour les informations d'une piscine selon son identifiant.
+      body:
+        application/json:
+        schema: !include ../schemas/update-piscine.json
+      responses:
+        200:
+          description: l'installation a été modifiée.
+        404:
+          description: l'identifiant spécifié n'existe pas.
+        500:
+          description: une erreur interne s'est produite. L'erreur a été signalée à l'équipe de développement.      
+
+
+/supprimer-picine:
+  /{id}:
+    delete:
+      description: supprimer une piscine selon son identifiant.
+      responses:
+        200:
+          description: l'installation a été supprimée.
+        404:
+          description: l'identifiant spécifié n'existe pas.
+        500:
+          description: une erreur interne s'est produite. L'erreur a été signalée à l'équipe de développement.        

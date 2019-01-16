@@ -1,0 +1,10 @@
+1. create repository in GitHub : Bibliotheque_Nodejs_ConservatoireEMRTM
+Description - Application web pour la gestion des livres de cuisine, disponible pour consultation publique.
+2. create file : prjNodeJs_ConservatoireEMRTM_Rm
+3. open git Bash
+4. create README.md inside prjNodeJs_ConservatoireEMRTM_Rm
+   git init
+5. git add README.md
+6. git commit -m "first commit"
+7. git remote add origin https://github.com/RicardoAMendoza/Bibliotheque_Nodejs_ConservatoireEMRTM.git
+8. git push -u origin master

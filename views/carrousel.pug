@@ -1,0 +1,97 @@
+.block-cart.modal.fade#blockCarrousel
+    .modal-dialog.modal-lg.modal-dialog-centered
+          .modal-content#ModalCarrousel
+            .modal-header
+              button.close(type="button",data-dismiss="modal") 
+                     span(aria-hidden="true") &times;
+                     span.sr-only Close
+              h3#carteurTitle.modal-title Carrousel
+            .modal-body
+            .container-fluid
+              .row
+                  .table#tbcar_Result
+                    table#tableCar.table.table-hover.table-striped.table-bordered.table-responsive.display
+                      thead
+                        tr
+                          th#tbcarId ID
+                          th#tbcarNom Image
+                          //-th.hide#tbcarpays Pays
+                          //-th#tbcarville Ville
+                          //-th.hide CodePays
+                          //-th#tbcarChemin Chemin de l'image
+                          //-th.hide
+                      tbody#tbodycarResult
+                      a &nbsp; &nbsp; &nbsp;          
+              .row
+                .col-md-4
+                  .form-inline
+                    .form-group
+                      
+                      label#lblcarId ID :
+                  .form-inline
+                    .form-group
+                      
+                      input.form-control#txtcarId(type="text" style='width: 200px;') 
+                .col-md-4
+                  .form-inline
+                    .form-group
+                      
+                      label#lblcarImgNom Image :
+                  .form-inline
+                    .form-group
+                      
+                      input.form-control#txtcarNom(type="text", style='width: 200px;')
+                //-
+                  .col-md-3
+                  
+                    .form-inline
+                      .form-group
+                        
+                        label#lblcarcodepays Pays :
+                    .form-inline
+                      .form-group
+                        select.form-control#cboxcarcodepays(onchange="loadVilleEdi()", style='width: 200px;')
+                .col-md-4
+                //-
+                  .form-inline
+                    .form-group
+                      label#lblcarcodeville Chemin de l'image :
+                  .form-inline
+                    .form-group
+                      input.form-control#txtcarChemin(type="text", style='width: 200px;')    
+              hr
+            //-Modal Carrousel
+            .modal-footer 
+                .container
+                  .row
+                    .col-md-2
+                          .panel#PanelChargerimage
+                                a &nbsp; &nbsp;
+                                button#btncarChargerImg.btn.btn-info(type="button",style='width: 150px;') Charger image
+                                input#upload-input-carrousel(type="file" name="uploadsCarrousel[]" accept="application/jpeg")
+                                //-input#upload-input(type="file" name="uploads[]" multiple="multiple")
+                                //-input#upload-input(type="file" name="uploads[]" accept="application/pdf") 
+                    .col-md-2
+                      .panel#PanelSupprimerimage
+                          a &nbsp; &nbsp;
+                          button#btncarSup.btn.btn-info(type="button",style='width: 150px;', onclick="supprimerCarrousel()") Supprimer
+                    .col-md-2
+                      .panel#PaneEnregistrerimage
+                          a &nbsp; &nbsp;
+                          button#btncarSave.btn.btn-info(type="button",style='width: 150px;', onclick="enregistrerCarrousel()") Enregistrer
+                    .col-md-2
+                      .panel#PanelFermerimage
+                          a &nbsp; &nbsp;
+                          button#btncarFermer.btn.btn-info(type="button",data-dismiss="modal", style='width: 150px;') Fermer     
+                  .row   
+                    a &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;     
+                  .row 
+                    .col-md-4
+                      .form-inline
+                        .form-group
+                          input#chBcarLoop(type="checkbox")
+                          a &nbsp; &nbsp; &nbsp;
+                          label#lblcarLoop Enregistrer et continuer une nouvelle saisie.
+                    .col-md-4
+                    //-champ bide
+                    //-end Modal Carrousel

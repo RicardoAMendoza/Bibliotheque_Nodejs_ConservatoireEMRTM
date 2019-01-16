@@ -1,0 +1,51 @@
+//-ConservatoireEMRTM.
+//-Langage de programmation : nodeJS (l'installation du framework Express est requis).
+//-Version 0.1
+//-Original author: Andy Del Risco & Ricardo Mendoza
+//-Released with the MIT License: http://www.opensource.org/licenses/mit-license.php
+//-Copyright (c) 2018 Andy Del Risco and Ricardo Mendoza
+//-Hiver-2018
+
+//-Begin Modal Aproposdenous
+.block-edit.modal.fade#blockAproposdenous
+    .modal-dialog.modal-lg.modal-dialog-centered
+          .modal-content#ModalAproposdenous
+            .modal-header
+              button.close(type="button",data-dismiss="modal") 
+                     span(aria-hidden="true") &times;
+                     span.sr-only Close
+              h3#aproposdenousTitle.modal-title À propos de nous
+            .modal-body
+              .row
+                .col-sm-1
+                .col-sm-2
+                  img(src="img/logo.png" , style='width: 100px;')
+                .col-sm-6
+                  h3 
+            .container-fluid
+            
+              include:markdown-it APROPOS.md
+              
+            .modal-footer
+                .container
+                  .row
+                    .col-md-4
+                      .form-inline
+                        .form-group
+
+                    .col-md-4
+                      .form-inline
+                        .form-group
+                          a &nbsp; &nbsp; &nbsp;
+                          button#btnapnFermer.btn.btn-info(data-dismiss="modal", type="button", style='width: 150px;') Fermer
+
+                  .row   
+                    a &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;     
+                  .row 
+                    .col-md-4
+                      .form-inline
+                        .form-group
+
+                    .col-md-4
+
+

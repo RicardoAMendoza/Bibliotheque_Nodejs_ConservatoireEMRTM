@@ -1,0 +1,31 @@
+//-ConservatoireEMRTM.
+//-Langage de programmation : nodeJS (l'installation du framework Express est requis).
+//-Version 0.1
+//-Original author: Andy Del Risco & Ricardo Mendoza
+//-Released with the MIT License: http://www.opensource.org/licenses/mit-license.php
+//-Copyright (c) 2018 Andy Del Risco and Ricardo Mendoza
+//-Hiver-2018
+
+//-Begin feed
+
+doctype xml
+rss(version='2.0', xmlns:atom='http://www.w3.org/2005/Atom')
+    channel
+        title #{title}
+        link http://ecole-metiers-restauration-tourisme.csdm.ca/ecole/conservatoire-culinaire-du-quebec-lemrtm/
+        description #{description}
+        language fr-FR
+        copyright Copyright 2018, Conservatoire culinaire
+        generator Consevaroire culinaire
+        if posts.length
+            lastBuildDate= new Date(posts[0].published_at).toUTCString()
+        |
+        | <atom:link href="http://ecole-metiers-restauration-tourisme.csdm.ca/ecole/conservatoire-culinaire-du-quebec-lemrtm/feed/" rel="self" type="application/rss+xml"/>
+
+        each post in posts
+            item
+                title= post.title
+                link http://ecole-metiers-restauration-tourisme.csdm.ca/ecole/conservatoire-culinaire-du-quebec-lemrtm/
+                guid 
+                description #{post.body}
+                pubDate= new Date(post.published_at).toUTCString()

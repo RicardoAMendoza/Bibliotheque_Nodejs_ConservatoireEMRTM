@@ -1,0 +1,87 @@
+//-ConservatoireEMRTM.
+//-Langage de programmation : nodeJS (l'installation du framework Express est requis).
+//-Version 0.1
+//-Original author: Andy Del Risco & Ricardo Mendoza
+//-Released with the MIT License: http://www.opensource.org/licenses/mit-license.php
+//-Copyright (c) 2018 Andy Del Risco and Ricardo Mendoza
+//-Hiver-2018
+
+//-Begin ModalEtat
+.block-edit.modal.fade#blockEtat
+  .modal-dialog.modal-lg.modal-dialog-centered
+          .modal-content#ModalEtat
+            .modal-header
+              button.close(type="button",data-dismiss="modal") 
+                     span(aria-hidden="true") &times;
+                     span.sr-only Close
+              h3#etatTitle.modal-title État
+            .modal-body
+            .container-fluid
+              .row
+                  .table#tbeta_Result
+                    table#tableEta.table.table-hover.table-striped.table-bordered.table-responsive.display
+                      thead
+                        tr
+                          th#tbetaId ID
+                          th#tbetaEtat État
+                          th.hide#tbetaPrenom Prenom
+                          th.hide
+                      tbody#tbodyetaResult
+                      a &nbsp; &nbsp; &nbsp;    
+              .row
+                .col-md-6
+                  .form-inline
+                    .form-group
+                      a &nbsp; &nbsp; &nbsp;
+                      label#lbletaId ID :
+                  .form-inline
+                    .form-group
+                      a &nbsp; &nbsp; &nbsp;
+                      input.form-control#txtetaId(type="number", style='width: 200px;') 
+                .col-md-6
+                  .form-inline
+                    .form-group
+                      a &nbsp; &nbsp;
+                      label#lbletaEtat État :
+                  .form-inline
+                    .form-group
+                      a &nbsp; &nbsp;
+                      input.form-control#txtetaEtat(type="text", style='width: 200px;') 
+            //-     
+                .col-md-4
+                  .form-inline
+                    .form-group
+                      label#lbletaPrenom Prenom :
+                  .form-inline
+                    .form-group
+                      input.form-control#txtetaPrenom(etae="text", style='width: 200px;') 
+              hr
+            //-Modal Etat
+            .modal-footer
+                .container
+                  .row
+                    .col-md-4
+                      .form-inline
+                        .form-group
+                          a &nbsp; &nbsp; &nbsp; &nbsp;
+                          button#btnetaNouveau.btn.btn-info(onclick="clairtxtBoxEtat()", type="button", style='width: 150px;') Nouveau
+                          a &nbsp; &nbsp; &nbsp; &nbsp;
+                          button#btnetaSup.btn.btn-info(type="button",style='width: 150px;', onclick="supprimerEtat()") Supprimer
+                    .col-md-4
+                      .form-inline
+                        .form-group
+                          a &nbsp; &nbsp; &nbsp; &nbsp;
+                          button#btnetaSave.btn.btn-info(type="button",style='width: 150px;', onclick="enregistrerEtat()") Enregistrer
+                          a &nbsp; &nbsp; &nbsp; &nbsp;
+                          button#btnetaFermer.btn.btn-info(type="button",data-dismiss="modal", style='width: 150px;') Fermer     
+                  .row   
+                    a &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;     
+                  .row 
+                    .col-md-4
+                      .form-inline
+                        .form-group
+                          input#chBetaLoop(type="checkbox")
+                          a &nbsp; &nbsp; &nbsp;
+                          label#lbletaLoop Enregistrer et continuer une nouvelle saisie.
+                    .col-md-4
+                    //-champ bide

@@ -1,0 +1,114 @@
+//-ConservatoireEMRTM.
+//-Langage de programmation : nodeJS (l'installation du framework Express est requis).
+//-Version 0.1
+//-Original author: Andy Del Risco & Ricardo Mendoza
+//-Released with the MIT License: http://www.opensource.org/licenses/mit-license.php
+//-Copyright (c) 2018 Andy Del Risco and Ricardo Mendoza
+//-Hiver-2018
+
+//-Begin Modal Traduction
+.block-edit.modal.fade#blockTraduction
+    .modal-dialog.modal-lg.modal-dialog-centered
+          .modal-content#ModalTraduction
+            .modal-header
+              button.close(type="button",data-dismiss="modal") 
+                     span(aria-hidden="true") &times;
+                     span.sr-only Close
+              h3#traductionTitle.modal-title Traduction
+            .modal-body
+            .container-fluid
+              .row
+                  .table#tbtra_Result
+                    table#tableTra.table.table-hover.table-striped.table-bordered.table-responsive.display
+                      thead
+                        tr
+                          th#tbtraId ID
+                          th#tbtraidControle Controle
+                          th#tbtraModule Module
+                          th#tbtraFrancais Français
+                          th#tbtraAnglais Anglais
+                      tbody#tbodytraResult
+                      a &nbsp; &nbsp; &nbsp;         
+              .row
+                .col-md-2
+                  .form-inline
+                    .form-group
+                      a &nbsp; &nbsp; &nbsp;
+                      label#lbltraId ID :
+                  .form-inline
+                    .form-group
+                      a &nbsp; &nbsp; &nbsp;
+                      input.form-control#txttraId(type="text", style='width: 100px;') 
+                .col-md-5
+                  .form-inline
+                    .form-group
+                      a &nbsp; &nbsp;
+                      label#lbltraControle contrôle :
+                  .form-inline
+                    .form-group
+                      a &nbsp; &nbsp;
+                      input.form-control#txttraControle(type="text", style='width: 300px;')
+                .col-md-5
+                  .form-inline
+                    .form-group
+                      a &nbsp; &nbsp;
+                      label#lbltraModule Module :
+                  .form-inline
+                    .form-group
+                      a &nbsp; &nbsp;
+                      input.form-control#txttraModule(type="text", style='width: 300px;')     
+              .row
+                .col-md-2
+                
+                .col-md-5
+                  .form-inline
+                    .form-group
+                      a &nbsp; &nbsp;
+                      label#lbltraFrancais Français :
+                  .form-inline
+                    .form-group
+                      a &nbsp; &nbsp;
+                      input.form-control#txttraFrancais(type="text", style='width: 300px;')
+                      //-input.form-control#txttracodepays(type="text", style='width: 200px;')
+                .col-md-5
+                  .form-inline
+                    .form-group
+                      a &nbsp; &nbsp;
+                      label#lbltraAnglais Anglais :
+                  .form-inline
+                    .form-group
+                      a &nbsp; &nbsp;
+                      input.form-control#txttraAnglais(type="text", style='width: 300px;')
+                      //-input.form-control#txttracodeville(type="text", style='width: 200px;')        
+              hr
+            //-Modal Traduction
+            .modal-footer 
+                .container
+                  .row
+                    .col-md-4
+                      .form-inline
+                        .form-group
+                          a &nbsp; &nbsp; &nbsp; &nbsp;
+                          button#btntraNouveau.btn.btn-info( type="button", style='width: 150px;', onclick="clairtxtBoxTra()") Nouveau
+                          a &nbsp; &nbsp; &nbsp; &nbsp;
+                          button#btntraSup.btn.btn-info(type="button",style='width: 150px;', onclick="supprimerTraduction()") Supprimer
+                      //-champ bide
+                    .col-md-4
+                      .form-inline
+                        .form-group
+                          a &nbsp; &nbsp; &nbsp; &nbsp;
+                          button#btntraSave.btn.btn-info(type="button",style='width: 150px;', onclick="enregistrerTraduction()") Enregistrer
+                          a &nbsp; &nbsp; &nbsp; &nbsp;
+                          button#btntraFermer.btn.btn-info(type="button",data-dismiss="modal", style='width: 150px;') Fermer     
+                  .row   
+                    a &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;     
+                  .row 
+                    .col-md-4
+                      .form-inline
+                        .form-group
+                          input#chBtraLoop(type="checkbox")
+                          a &nbsp; &nbsp; &nbsp;
+                          label#lbltraLoop Enregistrer et continuer une nouvelle saisie.
+                    .col-md-4
+                    //-champ bide
+                    //-end Modal Traduction

@@ -1,0 +1,78 @@
+//-ConservatoireEMRTM.
+//-Langage de programmation : nodeJS (l'installation du framework Express est requis).
+//-Version 0.1
+//-Original author: Andy Del Risco & Ricardo Mendoza
+//-Released with the MIT License: http://www.opensource.org/licenses/mit-license.php
+//-Copyright (c) 2018 Andy Del Risco and Ricardo Mendoza
+//-Hiver-2018
+
+//-Begin Modal Langue
+.block-edit.modal.fade#blockLangue
+    .modal-dialog.modal-lg.modal-dialog-centered
+          .modal-content#ModalLangue
+            .modal-header
+              button.close(type="button",data-dismiss="modal") 
+                     span(aria-hidden="true") &times;
+                     span.sr-only Fermer
+              h3#langueTitle.modal-title Langue
+            .modal-body
+            .container-fluid
+              .row
+                  .table#tblan_Result
+                    table#tableLan.table.table-hover.table-striped.table-bordered.table-responsive.display
+                      thead
+                        tr
+                          th#tblanId ID
+                          th#tblanLangue Langue
+                          th.hide
+                      tbody#tbodylanResult
+                      a &nbsp; &nbsp; &nbsp;    
+              .row
+                .col-md-6
+                  .form-inline
+                    .form-group
+                      a &nbsp; &nbsp; &nbsp;
+                      label#lbllanId ID :
+                  .form-inline
+                    .form-group
+                      a &nbsp; &nbsp; &nbsp;
+                      input.form-control#txtlanId(type="text" style='width: 200px;') 
+                .col-md-6
+                  .form-inline
+                    .form-group
+                      a &nbsp; &nbsp;
+                      label#lbllanLangue Langue :
+                  .form-inline
+                    .form-group
+                      a &nbsp; &nbsp;
+                      input.form-control#txtlanLangue(type="text", style='width: 200px;')
+              hr
+            //-Modal Langue
+            .modal-footer
+                .container
+                  .row
+                    .col-md-4
+                      .form-inline
+                        .form-group
+                          a &nbsp; &nbsp; &nbsp; &nbsp;
+                          button#btnlanNouveau.btn.btn-info(type="button", style='width: 150px;', onclick="clairtxtBoxLan()") Nouveau
+                          a &nbsp; &nbsp; &nbsp; &nbsp;
+                          button#btnlanSup.btn.btn-info(type="button",style='width: 150px;', onclick="supprimerLangue()") Supprimer
+                    .col-md-4
+                      .form-inline
+                        .form-group
+                          a &nbsp; &nbsp; &nbsp; &nbsp;
+                          button#btnlanSave.btn.btn-info(type="button",style='width: 150px;', onclick="enregistrerLangue()") Enregistrer
+                          a &nbsp; &nbsp; &nbsp; &nbsp;
+                          button#btnlanFermer.btn.btn-info(type="button",data-dismiss="modal", style='width: 150px;') Fermer     
+                  .row   
+                    a &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;     
+                  .row 
+                    .col-md-4
+                      .form-inline
+                        .form-group
+                          input#chBlanLoop(type="checkbox")
+                          a &nbsp; &nbsp; &nbsp;
+                          label#lbllanLoop Enregistrer et continuer une nouvelle saisie.
+                    .col-md-4
+                    //-champ bide

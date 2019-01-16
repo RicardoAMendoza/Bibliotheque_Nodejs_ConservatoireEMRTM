@@ -1,0 +1,162 @@
+/*!
+ * ConservatoireEMRTM.
+ * Langage de programmation : nodeJS (l'installation du framework Express est requis).
+ * Version 0.1
+ * Original author: Andy Del Risco & Ricardo Mendoza
+ * Released with the MIT License: http://www.opensource.org/licenses/mit-license.php
+ * Copyright (c) 2018 Andy Del Risco and Ricardo Mendoza
+ * Hiver-2018
+ */
+ 
+/*Panel principal : panel de filtres*/
+#panelAdmin{
+  background-color: #F8ECE0;
+  /*color:white !important;
+  text-align: center;
+  font-size: 30px;*/
+  border-radius: 15px;
+
+}
+
+/*ModalEdit this the modal to edit the documents*/
+#ModalEdit{
+      background-color: #F8ECE0;
+      /*color:white !important;
+      text-align: center;
+      font-size: 30px;*/
+      border-radius: 15px;
+  
+  }
+
+  #PanelFichier {
+    background-color: #F8ECE0;
+  }
+
+  #Panelfichier {
+    background-color: #F8ECE0;
+  }
+
+  #PanelChargerfichier{
+    background-color: #F8ECE0;
+  }
+
+  #PanelChargerimage {
+    background-color: #F8ECE0;
+  }
+
+  #PaneEnregistrerimage {
+    background-color: #F8ECE0;
+  }
+
+  #PanelSupprimerimage {
+    background-color: #F8ECE0;
+  }
+
+  #PanelFermerimage {
+    background-color: #F8ECE0;
+  }
+
+  #PanelVisualiser {
+    background-color: #F8ECE0;
+  }
+
+  #ModalHeaderpdf {
+    background-color: #F8ECE0;
+    border-top-right-radius:15px;
+    border-top-left-radius:15px;
+  }
+
+  #ModalFooterpdf {
+    background-color: #F8ECE0;
+  }
+
+  #ModalBodypdf{
+    background-color: #F8ECE0;
+    /*border-radius: 15px;*/
+    border-bottom-left-radius:15px;
+    border-bottom-right-radius:15px;
+  }
+/*
+  #ModalContentpdf{
+    background-color: #F8ECE0;
+  }
+ */
+ #ModalType{
+  background-color: #F8ECE0;
+  border-radius: 15px;
+}
+
+#ModalEtat{
+background-color: #F8ECE0;
+border-radius: 15px;
+}
+
+ #ModalAuteur{
+    background-color: #F8ECE0;
+    border-radius: 15px;
+}
+
+#ModalEditeur{
+  background-color: #F8ECE0;
+  border-radius: 15px;
+}
+
+#ModalVille{
+  background-color: #F8ECE0;
+  border-radius: 15px;
+}
+
+#ModalLangue{
+  background-color: #F8ECE0;
+  border-radius: 15px;
+}
+
+#ModalClssement{
+  background-color: #F8ECE0;
+  border-radius: 15px;
+}
+
+#ModalClssement{
+  background-color: #F8ECE0;
+  border-radius: 15px;
+}
+
+#ModalFamilles{
+  background-color: #F8ECE0;
+  border-radius: 15px;
+}
+
+#ModalTraduction{
+  background-color: #F8ECE0;
+  border-radius: 15px;
+}
+
+#ModalUtilisateurs{
+  background-color: #F8ECE0;
+  border-radius: 15px;
+}
+
+#ModalPreferences{
+  background-color: #F8ECE0;
+  border-radius: 15px;
+}
+
+#ModalGalerie{
+  background-color: #F8ECE0;
+  border-radius: 15px;
+}
+
+#ModalCarrousel{
+  background-color: #F8ECE0;
+  border-radius: 15px;
+}
+
+#ModalAproposdenous{
+  background-color: #F8ECE0;
+  border-radius: 15px;
+}
+
+#ModalContactez {
+  background-color: #F8ECE0;
+  border-radius: 15px;
+}

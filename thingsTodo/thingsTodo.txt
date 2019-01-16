@@ -1,0 +1,170 @@
+
+Tuesday, August 28, 2018
+OK - Traduction Management/Gestion
+OK - Familly
+OK - Translation
+OK - Users
+OK - Preferences
+OK - eliminar carrousel
+- eliminar alerta de button traducction 
+- agregar bootstraps a button Galerie
+- funcion generateAproposdenous() agregarla al back end para que se inicie la pagina
+- logo quitarle el fondo blanco
+- Button exporter no funciona el PDF
+- Redisenar moldal Preferences y agregar a propos de nous
+
+----------------------------------------------------------------------------------------
+
+Monday, march 5, 2018
+OK - Double click para abrir un registro de la lista y quitar el boton visualiser
+OK - La lista o la tabla q se muestra cuando la persona hace filter, ella quiere q la tabla muestre las siguientes columnas : Auteur, Titre, Année, Editeur, Etat y Type
+OK - Exportacion a excell csv
+
+Tuesday, march 6, 2018
+OK - Interface public -> se reutilizo la interface admin
+OK - se agrego ,data-toggle="modal" data-backdrop="static" data-keyboard="false" a el boton Nouveau y al doble click para hacer que el Model quede fijo en la pantalla
+
+Tuesday, march 6, 2018
+OK - Validacion
+
+Wednesday, march 14, 2018
+OK - PDF
+http://pdfkit.org/docs/guide.pdf
+https://www.npmjs.com/package/voilab-pdf-table
+https://github.com/voilab/voilab-pdf-table
+https://edgecoders.com/generating-a-pdf-with-express-in-node-js-d3ff5107dff1
+- Upload
+  dos funcione
+  admin - cargar archivos
+  public - visualizar documento
+ok - Bootstrop
+http://issues.wenzhixin.net.cn/bootstrap-table/index.html
+https://pugjs.org/language/attributes.html
+OK - Linea que anuncie hacer doble click
+https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip
+OK - linea para validacion
+OK - Pug
+https://pugjs.org/language/includes.html
+OK - Eliminar ":" de Langue
+https://www.w3schools.com/jsref/jsref_indexof.asp
+https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_indexof
+
+Tuesday, march 27, 2018
+OK - Login - pug
+https://bootsnipp.com/fullscreen/2X0r
+OK - q-views
+OK - split tables.js
+OK - Interface auteur
+OK - Interface Editeur
+OK - Interface Ville
+OK - Interface Langue
+OK - Interface Classement
+OK - Interface Famille
+OK - Interface Utilissateur
+OK - Interface preferences
+
+OK - tpreferances
+    - Nous joindre
+	 - id automatico
+	 - nombre de la empresa
+	 - nombre del contacto
+	 - direccion
+	 - correo
+	 - telefono
+	 - comentario - varchar 1000
+	 
+OK - @google maps
+https://www.npmjs.com/package/@google/maps
+- latitude and longitude coordinates decimal
+http://latitudelongitude.org/address-latlong
+
+- IP page
+https://console.developers.google.com/apis/credentials?project=ccmap-200818&folder=&organizationId=&showFTMessage=false 
+
+IP Key : AIzaSyDPxtROhIF078MS4pvyH3Z0ad1tMeSn3Sk
+
+Wendnesday, april 25, 2018
+- Upload
+  dos funcione
+  admin - cargar archivos
+  public - visualizar documento
+  
+  w3schools.com
+  https://www.w3schools.com/nodejs/nodejs_uploadfiles.asp
+  Building a File Uploader with NodeJs
+  https://coligo.io/building-ajax-file-uploader-with-node
+  Node.js Image Uploading With Multer
+  www.youtube.com/watch?v=9Qzmri1WaaE&t=3s
+  dossier relative
+  https://www.google.ca/search?q=relative+folder+path&safe=strict&source=lnms&tbm=isch&sa=X&ved=0ahUKEwj1lp--w9jaAhWEneAKHdt3C1gQ_AUICigB&biw=1600&bih=779#imgrc=tpQmof7KR8woMM:
+  
+Monday, may 07, 2018
+
+ok - frame-modal in modal
+   - https://stackoverflow.com/questions/19528173/bootstrap-open-another-modal-in-modal
+   - https://www.bootply.com/lvKQA2AM28
+   - http://sforsuresh.in/bootstrap-modal-window-close-current-open-new-modal/
+   
+   - https://stackoverflow.com/questions/3737531/document-getelementbyid-src-file-path-is-changing-but-image-is-not
+
+OK - How to put scrollbar only for modal-body in bootstrap modal dialog
+   - https://stackoverflow.com/questions/25874001/how-to-put-scrollbar-only-for-modal-body-in-bootstrap-modal-dialog
+   -  https://www.bootply.com/T0yF2ZNTUd
+    
+Tuesday, may 08, 2018   
+OK - Login   
+   - https://www.youtube.com/watch?v=DhEGkaT3qoM
+
+   Wendnesday, My 09, 2018
+OK - Key Board enter Login
+OK   - btn Load document, ne efface pas le txt de Fichier
+OK - Delete file
+OK - txtBox User et Password sont effaces quand l'utilisateur ou mot de pass sont pas les corrects
+OK - txtBox User et Password sont effaces pendant la deconeccion.
+
+Monday, june 04, 2018
+
+OK - type : ajouter type dans gestion
+OK - etat : ajouter etat dans gestion
+1.  Modals
+2.  CSS
+3.  Traduction
+4.  CSS Buttons
+5.  add to app
+6.  Services
+7.  vistas
+8.  storageProcedure
+9.  script.js
+10. index.js
+11. tables jquery
+
+- Effacer pays
+1.  cboxedPays
+    eliminar : //-loadCBO("/tpays","cboxedPays","codepays","nompays"); // tpays
+2.  visualiserEditeurControls()
+3.  lbledPays
+4.  loadVille()
+
+5.  cboxedClas
+6.  visualiserClassementControls()
+
+7.  cboxedicodepays
+8.  loadVilleEdi()
+    function loadVille(){
+    loadCBO("/tville?pays="+document.getElementById("cboxedPays").value,"cboxedVill","codeville","nomville"); // tville
+   
+OK - rss
+que es un rss
+https://www.iteracion42.com/blog/generar-feed-rss-2-0-nodejs
+http://www.rss.nom.es/usos-rss-para-que-sirve/
+https://www.lifewire.com/rss-101-3482781
+https://feedly.com/i/welcome
+http://www.journaldemontreal.com/rss.xml
+
+OK - Logo rss
+OK - Logo facebook
+OK - correcciones de Andy sobre los scripts
+- login
+
+
+

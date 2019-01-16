@@ -1,0 +1,334 @@
+doctype html
+htmlpng
+  head
+    //-ConservatoireEMRTM.
+    //-Langage de programmation : nodeJS (l'installation du framework Express est requis).
+    //-Version 0.1
+    //-Original author: Andy Del Risco & Ricardo Mendoza
+    //-Released with the MIT License: http://www.opensource.org/licenses/mit-license.php
+    //-Copyright (c) 2018 Andy Del Risco and Ricardo Mendoza
+    //-Hiver-2018
+    
+    title= title
+    //- Metas de l'école
+    meta(name="description" content="Un Conservatoire pour préserver le patrimoine culinaire d’ici Installé dans un local de l&#039;École des métiers de la restauration et du tourisme de Montréal,")
+    meta(charset="utf-8")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+     //- icon in tab
+    link(rel="icon" type="image/png" href="img/EMAM.gif" )
+    //----------------- end icon in tab img(src="img/logo.png" , style='width: 100px;')
+
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    //- Uploader
+    link(rel='stylesheet', href='/stylesheets/styleUploader.css')
+    //- Modals
+    link(rel='stylesheet', href='/stylesheets/styleModal.css')
+    //- bootstrap w3schools
+    //- link(rel="stylesheet", href="https://www.w3schools.com/w3css/4/w3.css")
+    //- Bootstrap 
+    //-link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css")
+    //-script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js")
+    //-script(src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/usm/popper.min.js")
+    
+    //-singin
+    link#bootstrap-css(rel="stylesheet", href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css")
+    script(src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js")
+    script(src="//code.jquery.com/jquery-1.11.1.min.js")
+    //----------------- end singin
+
+    //- @google maps
+    //- IP page
+    //- https://console.developers.google.com/apis/credentials?project=ccmap-200818&folder=&organizationId=&showFTMessage=false 
+    //- IP Key : AIzaSyDPxtROhIF078MS4pvyH3Z0ad1tMeSn3Sk
+    //- script(src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap")
+    script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDPxtROhIF078MS4pvyH3Z0ad1tMeSn3Sk&callback=initMap")
+    //----------------- end @google maps
+
+    //- Carrousel
+    //- https://www.w3schools.com/bootstrap/tryit.asp?filename=trybs_carousel&stacked=h
+    link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css")
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js")
+    script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js")
+    //-script(src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js")
+    //----------------- end Carrousel
+
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/usm/popper.min.js")
+    link(rel="stylesheet", href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css")
+    //-script(src="https://code.jquery.com/jquery-1.12.4.js") 
+    script(src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js") 
+    script(src="javascripts/bootbox.min.js") 
+
+    //- Latest compiled and minified CSS  (Bootstrap-table)
+    link(rel="stylesheet", href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.12.1/bootstrap-table.min.css")
+    //- Latest compiled and minified JavaScript 
+    script(src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.12.1/bootstrap-table.min.js")
+    //- Latest compiled and minified Locales -->
+    script(src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.12.1/locale/bootstrap-table-en-US.min.js")
+    script(src="//rawgit.com/hhurz/tableExport.jquery.plugin/master/tableExport.js")
+    script(src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.12.1/extensions/export/bootstrap-table-export.min.js")
+    meta(charset="utf-8")
+
+    script(src="javascripts/script.js")
+
+    link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Raleway', type='text/css')
+   
+  body(onload="loadListe()")
+    .container
+      .row
+        .col-sm-12
+          .w3-container
+            .w3-panel#panelAdmin.w3-leftbar.w3-sand.w3-round-xlarge
+              //- 5 espacio 
+              .container
+                //-   
+                .row
+                  a &nbsp; &nbsp; &nbsp; &nbsp;
+                .row
+                  .col-sm-2
+                  .col-sm-2
+                  .col-sm-2
+                  .col-sm-2
+                  lbl
+                  .col-sm-4
+                    .form-inline
+                        .form-group
+                          if page=="admin"
+                            .container                              
+                              .dropdown
+                                label#lblfltConnect Bienvenue :
+                                a &nbsp; &nbsp;
+                                button#btnfltConnect.btn.btn-info(href="#" role="button"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style='width: 130px;') #{prenom}
+                                  a &nbsp; &nbsp; &nbsp;
+                                  .caret
+                                ul.dropdown-menu(role="menu" aria-labelledby="" )
+                                  li: a#ddownfltConnect(onclick="deconnexion()" ) Déconnexion
+                .row
+                  .col-sm-2
+                  .col-sm-2
+                  .col-sm-2
+                  .col-sm-2
+                  .col-sm-2
+                  lbl
+                  .col-sm-2          
+                hr.hide
+              .container
+                .row
+                  .col-sm-2
+                    img(src="img/logo.png" , style='width: 100px;')
+                  .col-sm-2
+                  .col-sm-2
+                  .col-sm-2
+                  .col-sm-2
+                    .container
+                        .form-inline
+                          .form-group
+                          label#lblfltLang Langue :
+                        .form-inline
+                          .form-group
+                          select.form-control#cboxfltLang(onchange="changeLangue()" style='width: 130px;')
+                          a &nbsp; &nbsp; 
+                          img(src="img/rss.png" , onclick="visualiserFeed()",type="button",  style='width: 35px; cursor:pointer;')
+                          a &nbsp;
+                          img(src="img/fb.png" , onclick="visualiserFb()",type="button",  style='width: 35px; cursor:pointer;')
+                .row
+                a &nbsp; &nbsp; &nbsp;
+                .row
+                  .col-sm-8
+                      h1#headerTitle #{title}
+              hr
+              .block-filtre#blockFiltre
+                //-container buttons
+                .container
+                  .row
+                    //-premier colonne buttons
+                    .col-md-2
+                      .form-inline
+                        .form-group
+                         
+                          .container                              
+                            .dropdown
+                              button#btnfltAdminExDdown.btn.btn-info.btn-hover.dropdown-toggle(href="#" role="button"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style='width: 130px; ')  Exporter
+                                a &nbsp; &nbsp;
+                                .caret
+                              ul.dropdown-menu(role="menu" aria-labelledby="" )
+                                li: a(onclick="genererFichier('csv')" ) CSV
+                                li: a(onclick="genererFichier('pdf')") PDF
+                    //-deuxième colonne buttons         
+                    .col-md-2
+                      .form-inline
+                        .form-group
+                          if page=="admin"
+                              //-data-target="#blockEdit" 
+                              a &nbsp; &nbsp; &nbsp;
+                              button#btnfltNouv.btn.btn-info(onclick="visualiserDocument('N')",type="button",data-toggle="modal"  data-keyboard="false",style='width: 130px;')  Nouveau            
+                    //-troisieme colonne buttons
+                    .col-md-2
+                      .form-inline
+                        .form-group
+                          .container 
+                            if page=="admin"
+                              .dropdown
+                                button#btnfltAdminGeDdown.btn.btn-info.btn-hover.dropdown-toggle(style='width: 130px;'  href="#" role="button"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"  )  Gestion
+                                  a &nbsp; &nbsp;
+                                  .caret
+                                ul.dropdown-menu(aria-labelledby="", style='width: 130px;')
+                                  li: a#ddownType(onclick="ramplirtabTyp()",type="button",data-toggle="modal" data-backdrop="static" data-keyboard="false",data-target="#blockType", style='') Type document   
+                                  li: a#ddownEtat(onclick="ramplirtabEta()",type="button",data-toggle="modal" data-backdrop="static" data-keyboard="false",data-target="#blockEtat", style='') État
+                                  li: a#ddownAuteur(onclick="ramplirtabAut()",type="button",data-toggle="modal" data-backdrop="static" data-keyboard="false",data-target="#blockAuteur", style='') Auteur    
+                                  li: a#ddownEditeur(onclick="ramplirtabEdi()",type="button",data-toggle="modal" data-backdrop="static" data-keyboard="false",data-target="#blockEditeur", style='') Éditeur
+                                  li: a#ddownVille(onclick="ramplirtabVil()",type="button",data-toggle="modal" data-backdrop="static" data-keyboard="false",data-target="#blockVille", style='') Ville
+                                  li: a#ddownLangue(onclick="ramplirtabLan()",type="button",data-toggle="modal" data-backdrop="static" data-keyboard="false",data-target="#blockLangue", style='') Langue
+                                  li: a#ddownClassement(onclick="ramplirtabCla()",type="button",data-toggle="modal" data-backdrop="static" data-keyboard="false",data-target="#blockClassement", style='') Classement
+                                  li: a#ddownFamille(onclick="ramplirtabFam()",type="button",data-toggle="modal" data-backdrop="static" data-keyboard="false",data-target="#blockFamille", style='') Famille
+                                  li: a#ddownTraduction(onclick="ramplirtabTra()",type="button",data-toggle="modal" data-backdrop="static" data-keyboard="false",data-target="#blockTraduction", style='') Traduction
+                                  li: a#ddownUtilisateurs(onclick="ramplirtabUti()",type="button",data-toggle="modal" data-backdrop="static" data-keyboard="false",data-target="#blockUtilisateurs", style='') Utilisateurs
+                                  .divider
+                                  li: a#ddownPreferences(onclick="visualiserPreferences('M')",type="button",data-toggle="modal" data-backdrop="static" data-keyboard="false",data-target="#blockPreferences", style='') Préférences
+                                  
+                    //-quatrième colonne buttons
+                    .col-md-2
+                      .form-inline
+                        .form-group
+                          a &nbsp; &nbsp; &nbsp;
+                          button#btnfltGalerie.btn.btn-info(onclick="visualiserGalerie()",type="button",data-toggle="modal" data-backdrop="static" data-keyboard="false",data-target="#blockGalerie", style='width: 130px;') Galerie
+                    //-cinquième colonne buttons
+                    .col-md-2
+                      .form-inline
+                        .form-group
+                          a &nbsp; &nbsp;
+                          button#btnfltContactez.btn.btn-info(onclick="visualiserPreferences('M')",type="button",data-toggle="modal" data-backdrop="static" data-keyboard="false",data-target="#blockContactez", style='width: 130px;') Nous joindre
+                    //-sixième colonne buttons 
+                    .col-md-2
+                      .form-inline
+                        .form-group
+                          //-button#btnfltNouv.btn.btn-info(onclick="visualiserDocument('N')",type="button",data-toggle="modal"  data-keyboard="false",style='width: 130px;')  Nouveau 
+                          button#btnfltAproposdenous.btn.btn-info(onclick="generateAproposdenous()",type="button",data-toggle="modal" data-keyboard="false", style='width: 130px;') À propos de nous
+                          //-button#btnfltAproposdenous.btn.btn-info(onclick="",type="button",data-toggle="modal" data-backdrop="static" data-keyboard="false",data-target="#blockAproposdenous", style='width: 130px;') À propos de nous
+                hr
+                //-container filtre
+                .container
+                  //-premier row filtre
+                  .row
+                    //-premier colonne filtre
+                    .col-sm-3
+                      .form-inline
+                        .form-group
+                        label#lblfltType Type document :  
+                      .form-inline
+                        .form-group  
+                        select.form-control#cboxfltType( style='width: 200px;') 
+                    //-deuxième colonne filtre
+                    .col-sm-3
+                      .form-inline
+                        .form-group
+                        label#lblfltTitr Titre :
+                      .form-inline
+                        .form-group
+                        input.form-control#txtfltTitr(type="text", style='width: 250px;') 
+                    //-troisieme colonne filtre
+                    .col-sm-3
+                      .form-inline
+                        a &nbsp; &nbsp;  &nbsp;  &nbsp;
+                        .form-group
+                        label#lblfltAute Auteur :
+                      .form-inline
+                        a &nbsp; &nbsp; &nbsp;  &nbsp;
+                        .form-group
+                        select.form-control#cboxfltAute(style='width: 200px;')   
+                    //-quatrième colonne filtre
+                    .col-sm-3
+                  //-deuxième row filtre    
+                  .row
+                    //-premier colonne filtre       
+                    .col-sm-3
+                      .form-inline
+                        .form-group
+                        label#lblfltEdit Éditeur :
+                      .form-inline
+                        .form-group
+                        select.form-control#cboxfltEdit( style='width: 200px;') 
+                    //-deuxième colonne filtre
+                    .col-sm-3
+                      .form-inline
+                        .form-group
+                        label#lblfltIsbn ISBN :
+                      .form-inline
+                        .form-group
+                        input.form-control#txtfltIsbn(type="number", style='width: 250px;') 
+                    //-troisieme colonne filtre
+                    .col-sm-3
+                      .form-inline
+                        a &nbsp; &nbsp; &nbsp;  &nbsp;
+                        .form-group
+                        label#lblfltEtat État :
+                      .form-inline
+                        a &nbsp; &nbsp; &nbsp;  &nbsp;
+                        .form-group
+                        select.form-control#cboxfltEtat( style='width: 200px;')
+                    //-quatrième colonne filtre
+                    .col-sm-3  
+                      .form-inline
+                        .form-group
+                        label
+                      .form-inline
+                        a &nbsp; &nbsp; &nbsp;  &nbsp;
+                        .form-group
+                          button#btnFiltre.btn.btn-info(onclick="filtreInfo()", style='width: 100px;')  Filtre
+                hr
+                input#iddoc(type="hidden", value="")
+                //-Campo oculto
+                input#idfiltre(type="hidden", value="")
+              
+                .table#tbl_result
+                table#tableEd.table-responsive.display(data-toggle="tooltip" title="Double click to see details!")
+                    thead
+                      tr
+                        //-th.hide id
+                        th#tbfltId Id
+                        th#tbfltAute Auteur
+                        th#tbfltTitl Titre
+                        th#tbfltAnne Année
+                        th#tbfltEdit Éditeur
+                        th#tbfltEtat Etat
+                        th#tbfltType Type
+                    tbody#tbodyResult
+              footer
+                .row
+                    .col-sm-4
+                      ul#lesAuteurs
+                        a#lesAuteursSr(href='https://www.linkedin.com/in/andydelriscomanzanares/', target="_blank") Technicien principal csdm. Andy Del Risco 
+                        a#lesAuteursJr(href='https://www.linkedin.com/in/ricardo-mendoza-b8769849/', target="_blank") Programmeur analyste Jr. Ricardo Mendoza  
+                    .col-sm-2 
+                    .col-sm-3
+                    .col-sm-2    
+              //-Modal Aadmin
+              include admin-modal.pug
+              //-Modal Type document
+              include typeDocument.pug
+              //-Modal Etat
+              include etat.pug
+              //-Modal Auteur
+              include auteur.pug
+              //-Modal Editeur
+              include editeur.pug
+              //-Modal Ville
+              include ville.pug
+              //-Modal Langue
+              include langue.pug
+              //-Modal Classement
+              include classement.pug
+              //-Modal Famille
+              include famille.pug
+              //-Modal Traduction
+              include traduction.pug
+              //-Modal Utilisateur
+              include utilisateur.pug
+              //-Modal Preferences
+              include preferences.pug
+              //-Modal Contactez
+              include contactez.pug
+              //-Modal Galeries
+              include galeries.pug
+              //-Modal À propos de nous
+              include aproposdenous.pug

@@ -1,0 +1,35 @@
+{
+  "type": "array",
+  "required": true,
+  "installations": {
+    "type": "object",
+    "required": true,
+    "additionalProperties": false,
+    "properties": {
+      "typeins": {
+        "type": "string",
+        "required": true
+      },
+      "nom": {
+        "type": "string",
+        "required": true
+      },
+      "type": {
+        "type": "string",
+        "required": false
+      },
+      "nom_arr": {
+        "type": "string",
+        "required": true
+      },
+      "adresse": {
+        "type": "string",
+        "required": false
+      },
+      "condition": {
+        "type": "string",
+        "required": false
+      }
+    }
+  }
+}

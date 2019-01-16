@@ -1,0 +1,47 @@
+//-ConservatoireEMRTM.
+//-Langage de programmation : nodeJS (l'installation du framework Express est requis).
+//-Version 0.1
+//-Original author: Andy Del Risco & Ricardo Mendoza
+//-Released with the MIT License: http://www.opensource.org/licenses/mit-license.php
+//-Copyright (c) 2018 Andy Del Risco and Ricardo Mendoza
+//-Hiver-2018
+
+//-Begin Modal
+.block-edit.modal.fade#blockAuteur
+  .modal-dialog.modal-lg.modal-dialog-centered
+          .modal-content(style='width: 800px;')
+            .modal-header
+              button.close(type="button",data-dismiss="modal") 
+                     span(aria-hidden="true") &times;
+                     span.sr-only Close
+              
+            .modal-body
+            .container-fluid
+              .container-centered
+                .mainbox#loginbox.col-md-6.col-md-offset-3.col-sm-8.col-sm-offset-2(style='margin-top:50px;')
+                  .panel.panel-info
+                    .panel-heading
+                      .panel-title Sign In
+
+                    .panel-body(style='padding-top:30px;')
+
+                      .alert#login-alert.alert-danger.col-sm-12(style='display:none;')
+
+                      .form-horizontal#loginform(role='form;')
+                          .input-group(style='margin-bottom: 25px;')
+                            span.input-group-addon.glyphicon.glyphicon-user
+                            input.form-control#login-username(type="text"  name="username" value="" placeholder="username or email")
+
+                          .input-group(style='margin-bottom: 25px;')
+                            span.input-group-addon.glyphicon.glyphicon-lock
+                            input.form-control#login-password(type="password"  name="password" placeholder="password;")
+
+                          .form-group(style='margin-top:10px;')
+                            .controls.col-md-12
+                              button#btn-login.btn-success(onclick="",type="button",style='') Login
+
+                          .form-group
+                            .controls.col-md-12(style="border-top: 1px solid#888; padding-top:15px; font-size:85%")
+
+            .modal-footer
+                .container

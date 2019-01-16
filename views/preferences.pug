@@ -1,0 +1,197 @@
+//-ConservatoireEMRTM.
+//-Langage de programmation : nodeJS (l'installation du framework Express est requis).
+//-Version 0.1
+//-Original author: Andy Del Risco & Ricardo Mendoza
+//-Released with the MIT License: http://www.opensource.org/licenses/mit-license.php
+//-Copyright (c) 2018 Andy Del Risco and Ricardo Mendoza
+//-Hiver-2018
+
+//-Begin Modal Preferences
+.block-edit.modal.fade#blockPreferences
+    .modal-dialog.modal-lg.modal-dialog-centered
+          .modal-content#ModalPreferences
+            .modal-header
+              button.close(type="button",data-dismiss="modal") 
+                     span(aria-hidden="true") &times;
+                     span.sr-only Close
+              h3#preferencesTitle.modal-title Préférences
+            .modal-body
+            .container-fluid
+              //- Interface Body
+              .row
+                .col-md-4
+                  .form-inline
+                    .form-group
+                      a &nbsp; &nbsp; &nbsp; &nbsp;
+                      label.hide#lblpreId ID :
+                  .form-inline
+                    .form-group
+                      a &nbsp; &nbsp; &nbsp; &nbsp;
+                      input.hide.form-control#txtpreId(type="number" style='width: 210px;')
+                .col-md-4
+                .col-md-4      
+              .row       
+                .col-md-12
+                  .form-inline
+                    .form-group
+                      a &nbsp; &nbsp; &nbsp; &nbsp;
+                      label#lblpreEntreprise Entreprise :
+                  .form-inline
+                    .form-group
+                      a &nbsp; &nbsp; &nbsp; &nbsp;
+                      input.form-control#txtpreEntreprise(type="text", style='width: 800px;') 
+              .row
+                .col-md-4
+                  .form-inline
+                    .form-group
+                      a &nbsp; &nbsp; &nbsp; &nbsp;
+                      label#lblpreContact Contact :
+                  .form-inline
+                    .form-group
+                      a &nbsp; &nbsp; &nbsp; &nbsp;
+                      input.form-control#txtpreContact(type="text", style='width: 210px;')
+                .col-md-4
+                  .form-inline
+                    .form-group
+                      a &nbsp; &nbsp; &nbsp; &nbsp;
+                      label#lblpreCourriel Courriel :
+                  .form-inline
+                    .form-group
+                      a &nbsp; &nbsp; &nbsp; &nbsp;
+                      input.form-control#txtpreCourriel(type="text" style='width: 210px;') 
+                .col-md-4
+                  .form-inline
+                    .form-group
+                      a &nbsp; &nbsp; &nbsp;
+                      label#lblpreTelephone Téléphone :
+                  .form-inline
+                    .form-group
+                      a &nbsp; &nbsp; &nbsp;
+                      input.form-control#txtpreTelephone(type="text", style='width: 210px;') 
+                
+              .row
+                .container
+                  .form-inline
+                    .form-group
+                      a &nbsp; &nbsp; &nbsp; &nbsp;
+                      label#lblpreAdresse Adresse :
+                  .form-inline
+                    .form-group
+                      a &nbsp; &nbsp; &nbsp; &nbsp;
+                      input.form-control#txtpreAdresse(type="text", style='width: 800px;')
+              //- coordonnées
+              .row
+                .col-md-4
+                  .form-inline
+                    .form-group
+                      a &nbsp; &nbsp; &nbsp; &nbsp;
+                      label#lblpreAdLat Adresse latitude :
+                  .form-inline
+                    .form-group
+                      a &nbsp; &nbsp; &nbsp; &nbsp;
+                      input.form-control#txtpreAdLat(type="number", style='width: 210px;')
+                .col-md-4
+                  .form-inline
+                    .form-group
+                      a &nbsp; &nbsp; &nbsp; &nbsp;
+                      label#lblpreAdLng Adresse longitude :
+                  .form-inline
+                    .form-group
+                      a &nbsp; &nbsp; &nbsp; &nbsp;
+                      input.form-control#txtpreAdLng(type="number" style='width: 210px;') 
+                .col-md-4
+                  .form-inline
+                    .form-group
+                      a &nbsp; &nbsp; &nbsp;
+                      label#lblpreZoom Zoom sur la carte :
+                  .form-inline
+                    .form-group
+                      a &nbsp; &nbsp; &nbsp;
+                      input.form-control#txtpreZoom(type="number", style='width: 210px;')
+
+              .row
+                .col-md-4
+                  .form-inline
+                    .form-group
+                      a &nbsp; &nbsp; &nbsp; &nbsp;
+                      label#lblpremKrLat Latitude du marqueur :
+                  .form-inline
+                    .form-group
+                      a &nbsp; &nbsp; &nbsp; &nbsp;
+                      input.form-control#txtpremKrAdLat(type="number", style='width: 210px;')
+                .col-md-4
+                  .form-inline
+                    .form-group
+                      a &nbsp; &nbsp; &nbsp; &nbsp;
+                      label#lblpremKrLng Longitude du marqueur :
+                  .form-inline
+                    .form-group
+                      a &nbsp; &nbsp; &nbsp; &nbsp;
+                      input.form-control#txtpremKrAdLng(type="number" style='width: 210px;') 
+                .col-md-4
+
+              .row
+                .col-md-4
+                  .form-inline
+                    .form-group
+                      a &nbsp; &nbsp; &nbsp; &nbsp;
+                      label#lblpreFilepath Chemin du fichier de documents :
+                  .form-inline
+                    .form-group
+                      a &nbsp; &nbsp; &nbsp; &nbsp;
+                      input.form-control#txtpreFilepath(type="text", style='width: 210px;' )
+                .col-md-4
+                  .form-inline
+                    .form-group
+                      a &nbsp; &nbsp; &nbsp; &nbsp;
+                      label#lblpreImgpath Chemin du fichier de documents :
+                  .form-inline
+                    .form-group
+                      a &nbsp; &nbsp; &nbsp; &nbsp;
+                      input.form-control#txtpreImgpath(type="text", style='width: 210px;' )
+                .col-md-4        
+                     
+              //- map
+              .row
+                a &nbsp; &nbsp; &nbsp;
+                .container
+                  .col-md-12
+                   a &nbsp; &nbsp; &nbsp;
+                   p @google map - pour calculer latitude et longitude :
+                   a#linkLatitude(href='http://latitudelongitude.org/address-latlong', target="_blank") Clicker ici
+                   a &nbsp; &nbsp; &nbsp;
+                    .map#mapPr
+
+              .row        
+              a &nbsp; &nbsp; &nbsp;
+              .row
+                .container
+                  .form-inline
+                    .form-group
+                      a &nbsp; &nbsp; &nbsp;
+                      label#lblpreCommentaire Commentaire :
+                  .form-inline
+                    .form-group
+                      a &nbsp; &nbsp; &nbsp;
+                      input.form-control#txtpreCommentaire(type="text", style='width: 800px;' ) 
+              hr
+            //-Modal Preferences
+            .modal-footer
+                .container
+                  .row
+                    .col-md-2
+                      .form-inline
+                        .form-group   
+                    .col-md-6
+                      .form-inline
+                        .form-group
+                          a &nbsp; &nbsp; &nbsp;
+                          button#btnpreSave.btn.btn-info(onclick="enregistrerPreferences()", type="button", style='width: 150px;' ) Enregistrer
+                          a &nbsp; &nbsp; &nbsp;
+                          button#btnpreMap.btn.btn-info(onclick="visualiserPreferences('M')", type="button", style='width: 150px;' ) Carte
+                          a &nbsp; &nbsp; &nbsp;
+                          button#btnpreFermer.btn.btn-info(onclick ='clairtxtBoxPre();', data-dismiss="modal", type="button", style='width: 150px;') Fermer
+                  .row   
+                    a &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;     
+                  .row 
+

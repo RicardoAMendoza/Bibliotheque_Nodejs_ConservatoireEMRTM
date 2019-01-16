@@ -1,0 +1,47 @@
+idttraduction,id_controle,module,txtfrancaise,txtanglaise
+1,lblfltLang,admin,"Langue :","Language :"
+2,headerTitle,admin,"Bienvenue au Conservatoire Culinaire - (Administration)","Welcome to the Conservatoire Culinaire - (Administration)"
+3,btnfltNouv,admin,Nouveau,New
+4,btnfltVisu,admin,Visualiser,Display
+5,btnfltImp,admin,Imprimer,Print
+6,btnfltExpo,admin,"Exporter CSV","Export CSV"
+7,lblfltType,admin,"Type document :","Document type :"
+8,lblfltEdit,admin,"Éditeur :","Publisher :"
+9,lblfltTitr,admin,"Titre :","Title :"
+10,lblfltIsbn,admin,"ISBN :","ISBN :"
+11,lblfltAute,admin,"Auteur :","Author :"
+12,lblfltEtat,admin,"État :","State :"
+13,btnFiltre,admin,Filtre,Filter
+14,tbfltId,admin,Id,Id
+15,tbfltType,admin,Type,Type
+16,tbfltTitl,admin,Titre,Title
+17,tbfltAute,admin,Auteur,Author
+18,tbfltEdit,admin,Éditeur,Publisher
+19,tbfltIsbn,admin,ISBN,ISBN
+20,tbfltEtat,admin,État,State
+21,edTitle,admin,"Type document :","Document type :"
+22,lbledAute,admin,"Auteur :","Author :"
+23,lbledEdit,admin,"Éditeur :","Publisher :"
+24,lbledVille,admin,"Ville :","City :"
+25,lbledAnne,admin,"Année :","Year :"
+26,lbledEtat,admin,"État :","State :"
+27,lbledNume,admin,"Numéro de page :","Page number :"
+28,lbledFich,admin,"Fichier :","File :"
+29,lbledTitr,admin,"Titre :","Title :"
+30,lbledNomAuteur,admin,"Nom :","Name :"
+31,lbledNomEditeur,admin,"Nom :","Name :"
+32,lbledaddVille,admin,"Ajouter ville :","Add city :"
+33,lbledPrix,admin,"Prix :","Price :"
+34,lbledClas,admin,"Classement :","Ranking :"
+35,lbledFami,admin,"Famille :",Family:
+36,lbledDona,admin,"Donateur :","Donor :"
+37,lbledIsbn,admin,"ISBN :","ISBN :"
+38,lbledPreAuteur,admin,"Prénom :","First name :"
+39,lbledPays,admin,"Pays :","Country :"
+40,lbledLang,admin,"Langue :","Language  :"
+41,lbledaddClas,admin,"Ajouter classement :","Add ranking:"
+42,lbledaddFami,admin,"Ajouter famille :","Add familuy :"
+43,lbledComm,admin,"Commentaire :","Comment :"
+44,lblftrLoop,admin,"Enregistrer et continuer une nouvelle saisie.","Save and continue a new entry"
+45,btnftrSave,admin,Enregistrer,Save
+46,btnftrCancel,admin,Annuler,Cancel

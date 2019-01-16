@@ -1,0 +1,175 @@
+idttraduction,id_controle,module,txtfrancais,txtanglais
+1,lblfltLang,admin,"Langue :","Language :"
+2,headerTitle,admin,"Bienvenue au Conservatoire Culinaire","Welcome to the Conservatoire Culinaire"
+4,btnfltVisu,admin,Visualiser,Display
+5,btnfltImp,admin,Imprimer,
+6,btnfltExpo,admin,"Exporter CSV",
+7,lblfltType,admin,"Type document :","Document type :"
+8,lblfltEdit,admin,"Éditeur :","Publisher :"
+9,lblfltTitr,admin,"Titre :","Title :"
+10,lblfltIsbn,admin,"ISBN :","ISBN :"
+11,lblfltAute,admin,"Auteur :","Author :"
+12,lblfltEtat,admin,"État :","State :"
+13,btnFiltre,admin,Filtre,Filter
+14,tbfltId,admin,Id,Id
+15,tbfltType,admin,Type,Type
+16,tbfltTitl,admin,Titre,Title
+17,tbfltAute,admin,Auteur,Author
+18,tbfltEdit,admin,Éditeur,Publisher
+19,tbfltIsbn,admin,ISBN,ISBN
+20,tbfltEtat,admin,État,State
+21,edTitle,admin,"Type document :","Document type :"
+22,lbledAute,admin,"Auteur :","Author :"
+23,lbledEdit,admin,"Éditeur :","Publisher :"
+24,lbledVille,admin,"Ville :","City :"
+25,lbledAnne,admin,"Année :","Year :"
+26,lbledEtat,admin,"État :","State :"
+27,lbledNume,admin,"Numéro de page :","Page number :"
+28,lbledFich,admin,"Fichier :","File :"
+29,lbledTitr,admin,"Titre :","Title :"
+30,lbledNomAuteur,admin,"Nom :","Name :"
+31,lbledNomEditeur,admin,"Nom :","Name :"
+32,lbledaddVille,admin,"Ajouter ville :","Add city :"
+33,lbledPrix,admin,"Prix :","Price :"
+34,lbledClas,admin,"Classement :","Ranking :"
+35,lbledFami,admin,"Famille :",Family:
+36,lbledDona,admin,"Donateur :","Donor :"
+37,lbledIsbn,admin,"ISBN :","ISBN :"
+38,lbledPreAuteur,admin,"Prénom :","First name :"
+39,lbledPays,admin,"Pays :","Country :"
+40,lbledLang,admin,"Langue :","Language  :"
+41,lbledaddClas,admin,"Ajouter classement :","Add ranking :"
+42,lbledaddFami,admin,"Ajouter famille :","Add family :"
+43,lbledComm,admin,"Commentaire :","Comment :"
+44,lblftrLoop,admin,"Enregistrer et continuer une nouvelle saisie.","Save and continue a new entry"
+45,btnftrSave,admin,Enregistrer,Save
+46,btnftrCancel,admin,Annuler,Cancel
+47,tbfltAnne,admin,Année,Year
+48,tbfltId,admin,Id,Id
+49,tbfltAute,admin,Auteur,Author
+50,tbfltTitl,admin,Titre,Title
+51,tbfltAnne,admin,Année,Year
+52,tbfltEdit,admin,Éditeur,Editor
+53,tbfltEtat,admin,État,State
+54,tbfltType,admin,Type,Type
+55,btnfltAdminExDdown,admin,Exporter,Export
+56,btnfltNouv,admin,Nouveau,New
+58,btnfltAdminGeDdown,admin,Gestion,Management
+59,btnfltContactez,admin,"Nous joindre","Contact us"
+60,ddownAuteur,admin,"Auteur ",Author
+61,ddownEditeur,admin,Éditeur,Editor
+62,ddownVille,admin,Ville,City
+63,ddownLangue,admin,Langue,Language
+64,ddownClassement,admin,Classement,Ranking
+65,ddownFamille,admin,Famille,Family
+66,ddownTraduction,admin,Traduction,Translation
+67,ddownUtilisateurs,admin,Utilisateurs,Users
+68,ddownPreferences,admin,Préférences,Preferences
+69,auteurTitle,admin,Auteurs,Authors
+70,tbautId,admin,ID,ID
+71,tbautNom,admin,Nom,"Last name"
+72,tbautPrenom,admin,Prenom,Name
+73,lblautId,admin,"ID :","ID :"
+74,lblautNom,admin,"Nom :","Last name :"
+75,lblautPrenom,admin,"Prenom :","Name :"
+76,btnautNouveau,admin,Nouveau,New
+77,btnautSup,admin,Supprimer,Remove
+78,btnautSave,admin,Enregistrer,Save
+79,btnautFermer,admin,Fermer,Close
+80,lblautLoop,admin,"Enregistrer et continuer une nouvelle saisie.","Save and continue a new entry."
+81,editeurTitle,admin,Éditeurs,Publishers
+82,tbediId,admin,ID,ID
+83,tbediNom,admin,Nom,Name
+84,tbedipays,admin,Pays,Country
+85,tableEdi,admin,Ville,City
+86,lblediId,admin,"ID :","ID :"
+87,lblediNom,admin,"Nom :","Name :"
+88,lbledicodepays,admin,"Pays :","Country :"
+89,lbledicodeville,admin,"Ville :","City :"
+90,btnediNouveau,admin,Nouveau,New
+91,btnediSup,admin,Supprimer,Remove
+92,btnediSave,admin,Enregistrer,Save
+93,btnediFermer,admin,Fermer,CLose
+94,lblediLoop,admin,"Enregistrer et continuer une nouvelle saisie.","Save and continue a new entry."
+95,villeTitle,admin,Villes,Cities
+96,tbvilId,admin,ID,ID
+97,tbvilNomville,admin,Ville,City
+98,tbvilNompays,admin,Pays,Country
+99,tbvilcodepays,admin,"Code Pays","Country code"
+100,lblvilId,admin,"ID :","ID :"
+101,lblvilNomville,admin,"Ville :","City :"
+102,lblvilcodepays,admin,"Pays :","Country :"
+103,btnvilNouveau,admin,Nouveau,New
+104,btnvilSup,admin,Supprimer,Remove
+105,btnvilSave,admin,Enregistrer,Save
+106,btnvilFermer,admin,Fermer,Close
+107,lblvilLoop,admin,"Enregistrer et continuer une nouvelle saisie.","Save and continue a new entry."
+108,langueTitle,admin,Langue," Language"
+109,tblanId,admin,ID,ID
+110,tblanLangue,admin,Langue," Language"
+111,lbllanId,admin,"ID :","ID :"
+112,lbllanLangue,admin,"Langue :"," Language :"
+113,btnlanNouveau,admin,Nouveau,New
+114,btnlanSup,admin,Supprimer,Remove
+115,btnlanSave,admin,Enregistrer,Save
+116,btnlanFermer,admin,Fermer,Close
+117,lbllanLoop,admin,"Enregistrer et continuer une nouvelle saisie.","Save and continue a new entry."
+118,classementTitle,admin,Classement,Ranking
+119,tbclaId,admin,ID,ID
+120,tbclaClassement,admin,Classement,Ranking
+121,lblclaId,admin,"ID :","ID :"
+122,lblclaClassement,admin,"Classement :","Ranking :"
+123,btnclaNouveau,admin,Nouveau,New
+124,btnclaSup,admin,Supprimer,Remove
+125,btnclaSave,admin,Enregistrer,Save
+126,edTitle,admin,"Information du document","Document Information"
+127,lbledType,admin,"Type document","Document type"
+128,lbledTitr,admin,"Titre :","Title :"
+129,lbledIsbn,admin,"ISBN :","ISBN :"
+130,lbledAute,admin,"Auteur :","Author :"
+131,lbledNomAuteur,admin,"Nom :","Last name :"
+132,lbledPreAuteur,admin,"Prénom :","Name :"
+133,lbledEdit,admin,"Éditeur :","Publisher :"
+134,lbledNomEditeur,admin,"Nom :","Name :"
+135,lbledPays,admin,"Pays :","Country :"
+136,lbledVille,admin,"Ville :","City :"
+137,lbledaddVille,admin,"Ajouter ville :","Add city :"
+138,lbledAnne,admin,"Année :","Year :"
+139,lbledPrix,admin,"Prix :","Price :"
+140,lbledLang,admin,"Langue :","Language :"
+141,lbledNume,admin,"Numéro de page :"," Page number :"
+142,lbledClas,admin,"Classement :"," Ranking :"
+143,lbledaddClas,admin,"Ajouter classement :","Add ranking :"
+144,lbledEtat,admin,"État :"," State :"
+145,lbledDona,admin,"Donateur :","Donor :"
+146,lbledFami,admin,"Famille :","Family :"
+147,lbledaddFami,admin,"Ajouter famille :","Add family :"
+148,lbledFich,admin,"Fichier :","File :"
+149,upload-btn,admin,"Charger fichier","Load file"
+150,visualiser-btn,admin,Visualiser," Display"
+151,lbledComm,admin,"Commentaire :","Comment :"
+152,btnftrCancel,admin,Annuler,Cancel
+153,btnftrSave,admin,Enregistrer,Save
+154,lblftrLoop,admin,"Enregistrer et continuer une nouvelle saisie.","Save and continue a new entry."
+155,lblpreFilepath,admin,"Chemin du fichier de documents :","Documents path file :"
+156,lblfltConnect,admin,"Bienvenue :","Welcome :"
+157,ddownfltConnect,admin,Déconnexion,Disconnection
+158,lbledQuantite,admin,"Quantité :","Amount :"
+160,ddownType,admin,"Type document","Document type"
+161,ddownEtat,admin,État,State
+163,etatTitle,admin,État,State
+164,typeTitle,admin,"Type document","Document type"
+165,tbetaId,admin,ID,ID
+166,tbetaEtat,admin,État,State
+167,lbletaId,admin,"ID :","ID :"
+168,lbletaEtat,admin,"État :","State :"
+169,btntypNouveau,admin,Nouveau,New
+170,btntypSup,admin,Supprimer,Remove
+171,btntypSave,admin,Enregistrer,Save
+172,btntypFermer,admin,Fermer,Close
+173,lbltypLoop,admin,"Enregistrer et continuer une nouvelle saisie.","Save and continue a new entry."
+174,btnetaNouveau,admin,Nouveau,New
+175,btnetaSup,admin,Supprimer,Remove
+176,btnetaSave,admin,Enregistrer,Save
+177,btnetaFermer,admin,Fermer,Close
+178,lbletaLoop,admin,"Enregistrer et continuer une nouvelle saisie.","Save and continue a new entry."

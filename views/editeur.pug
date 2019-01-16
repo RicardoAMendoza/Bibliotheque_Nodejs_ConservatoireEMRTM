@@ -1,0 +1,102 @@
+//-ConservatoireEMRTM.
+//-Langage de programmation : nodeJS (l'installation du framework Express est requis).
+//-Version 0.1
+//-Original author: Andy Del Risco & Ricardo Mendoza
+//-Released with the MIT License: http://www.opensource.org/licenses/mit-license.php
+//-Copyright (c) 2018 Andy Del Risco and Ricardo Mendoza
+//-Hiver-2018
+
+//-Begin ModalEditeur
+.block-edit.modal.fade#blockEditeur
+    .modal-dialog.modal-lg.modal-dialog-centered
+          .modal-content#ModalEditeur
+            .modal-header
+              button.close(type="button",data-dismiss="modal") 
+                     span(aria-hidden="true") &times;
+                     span.sr-only Close
+              h3#editeurTitle.modal-title Éditeurs
+            .modal-body
+            .container-fluid
+              .row
+                  .table#tbedi_Result
+                    table#tableEdi.table.table-hover.table-striped.table-bordered.table-responsive.display
+                      thead
+                        tr
+                          th#tbediId ID
+                          th#tbediNom Nom
+                          //-th.hide#tbedipays Pays
+                          th#tbediville Ville
+                          //-th.hide CodePays
+                          th#tbediCodeville CodeVille
+                          th.hide
+                      tbody#tbodyediResult
+                      a &nbsp; &nbsp; &nbsp;          
+              .row
+                .col-md-4
+                  .form-inline
+                    .form-group
+                      
+                      label#lblediId ID :
+                  .form-inline
+                    .form-group
+                      
+                      input.form-control#txtediId(type="text" style='width: 200px;') 
+                .col-md-4
+                  .form-inline
+                    .form-group
+                      
+                      label#lblediNom Nom :
+                  .form-inline
+                    .form-group
+                      
+                      input.form-control#txtediNom(type="text", style='width: 200px;')
+                //-
+                  .col-md-3
+                  
+                    .form-inline
+                      .form-group
+                        
+                        label#lbledicodepays Pays :
+                    .form-inline
+                      .form-group
+                        select.form-control#cboxedicodepays(onchange="loadVilleEdi()", style='width: 200px;')
+                .col-md-4
+                  .form-inline
+                    .form-group
+                      
+                      label#lbledicodeville Ville :
+                  .form-inline
+                    .form-group
+                      select.form-control#cboxedicodeville( style='width: 200px;')       
+              hr
+            //-Modal Editeur
+            .modal-footer 
+                .container
+                  .row
+                    .col-md-4
+                      .form-inline
+                        .form-group
+                          a &nbsp; &nbsp; &nbsp; &nbsp;
+                          button#btnediNouveau.btn.btn-info( type="button", style='width: 150px;', onclick="clairtxtBoxEdi()") Nouveau
+                          a &nbsp; &nbsp; &nbsp; &nbsp;
+                          button#btnediSup.btn.btn-info(type="button",style='width: 150px;', onclick="supprimerEditeur()") Supprimer
+                      //-champ bide
+                    .col-md-4
+                      .form-inline
+                        .form-group
+                          a &nbsp; &nbsp; &nbsp; &nbsp;
+                          button#btnediSave.btn.btn-info(type="button",style='width: 150px;', onclick="enregistrerEditeur()") Enregistrer
+                          a &nbsp; &nbsp; &nbsp; &nbsp;
+                          button#btnediFermer.btn.btn-info(type="button",data-dismiss="modal", style='width: 150px;') Fermer     
+                  .row   
+                    a &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;     
+                  .row 
+                    .col-md-4
+                      .form-inline
+                        .form-group
+                          input#chBediLoop(type="checkbox")
+                          a &nbsp; &nbsp; &nbsp;
+                          label#lblediLoop Enregistrer et continuer une nouvelle saisie.
+                    .col-md-4
+                    //-champ bide
+                    //-end Modal Editeur

@@ -1,0 +1,35 @@
+Application web pour la gestion des livres de cuisine, disponible pour consultation publique.
+
+git clone https://RicardoAMendoza:1!492Omn!@gitlab.com/AndyDelRisco/ConservatoireEMRTM.git
+https://gitlab.com/AndyDelRisco/ConservatoireEMRTM.git
+
+Conectar Node.js con MySQL
+http://fernando-gaitan.com.ar/introduccion-a-node-js-parte-14-conectar-node-js-con-mysql/
+
+How do I make git ask for a username/password instead of an ssh key?
+https://community.c9.io/t/how-do-i-make-git-ask-for-a-username-password-instead-of-an-ssh-key/6732
+
+Working with Express.js, AngularJS and Node.js
+https://insidemysql.com/develop-by-example-document-store-working-with-express-js-angularjs-and-node-js/
+
+Liste des pays du monde au format SQL, CSV ou XML
+http://sql.sh/514-liste-pays-csv-xml
+
+en web
+http://gestionemam.csdm.qc.ca:3000/admin
+
+Generating a PDF with Express & Node.JS
+https://edgecoders.com/generating-a-pdf-with-express-in-node-js-d3ff5107dff1
+PDFKit Guide
+http://pdfkit.org/docs/guide.pdf
+
+pdf tables
+https://github.com/voilab/voilab-pdf-table
+https://www.npmjs.com/package/voilab-pdf-table
+
+Framework bootstrap-table
+http://issues.wenzhixin.net.cn/bootstrap-table/index.html
+
+Bootstrap Table Examples
+http://issues.wenzhixin.net.cn/bootstrap-table/index.html
+

@@ -1,0 +1,22 @@
+/*!
+ * ConservatoireEMRTM.
+ * Langage de programmation : nodeJS (l'installation du framework Express est requis).
+ * Version 0.1
+ * Original author: Andy Del Risco & Ricardo Mendoza
+ * Released with the MIT License: http://www.opensource.org/licenses/mit-license.php
+ * Copyright (c) 2018 Andy Del Risco and Ricardo Mendoza
+ * Hiver-2018
+ */
+ 
+#blockEdit{
+    display: block !important; /* I added this to see the modal, you don't need this */
+}
+
+/* Important part */
+#modal-dialogBedit{
+    overflow-y: initial !important
+}
+#modal-bodyBedit{
+    height: 250px;
+    overflow-y: auto;
+}

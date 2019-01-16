@@ -1,0 +1,52 @@
+/*!
+ * ConservatoireEMRTM.
+ * Langage de programmation : nodeJS (l'installation du framework Express est requis).
+ * Version 0.1
+ * Original author: Andy Del Risco & Ricardo Mendoza
+ * Released with the MIT License: http://www.opensource.org/licenses/mit-license.php
+ * Copyright (c) 2018 Andy Del Risco and Ricardo Mendoza
+ * Hiver-2018
+ */
+
+#upload-btn{
+    background-color: rgb(146, 15, 6); /* Green */
+    border: none;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+  }
+  #upload-btn:hover{
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+  }
+
+  #visualiser-btn{
+    background-color: rgb(146, 15, 6); /* Green */
+    border: none;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+  }
+  #visualiser-btn:hover{
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+  }
+
+  .panel {
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .panel-uploader {
+    text-align: left;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+/*
+  .panel-visualiser {
+    position:absolute;
+		top: 43px;
+		left: 50px;
+    //bottom: 20px;
+  }
+*/
+ 
+#upload-input {
+    display: none;
+  }

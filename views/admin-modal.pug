@@ -1,0 +1,338 @@
+script(src="javascripts/uploader.js")
+.block-edit.modal.fade#blockEdit
+    .modal-dialog#modal-dialogBedit.modal-lg.modal-dialog-centered( style='overflow-y: scroll; max-height:90%;  margin-top: 50px; margin-bottom:50px;')
+        .modal-content#ModalEdit
+         .modal-header
+          button.close(type="button",data-dismiss="modal") 
+                 span(aria-hidden="true") &times;
+                 span.sr-only Close
+          h3#edTitle.modal-title Information du document
+          
+         .modal-body#modal-bodyBedit
+            .container-fluid
+              .row
+                .col-md-4
+                  .form-inline
+                    .form-group
+                      label#lbledType Type document :
+                  .form-inline
+                    .form-group  
+                      select.form-control#cboxedType( style='width: 200px;') 
+                .col-md-4
+                  .form-inline
+                    .form-group
+                      label#lbledTitr Titre :
+                  .form-inline
+                    .form-group 
+                      input.form-control#txtedTitr(type="text", style='width: 200px;') 
+                .col-md-4
+                  .form-inline
+                    .form-group
+                      label#lbledIsbn ISBN :
+                  .form-inline
+                    .form-group
+                      input.form-control#txtedIsbn(type="text", style='width: 200px;') 
+              hr
+              .row
+                .col-md-4
+                  .form-inline
+                    .form-group
+                     label#lbledAute Auteur :
+                     if page=="admin" 
+                      button#btnedaddAute.btn-xs.btn-link(onclick="visualiserAuteurControls()",type="button",data-target="#blockEdit",  style='width:50px;') ( + )
+                  .form-inline
+                    .form-group
+                     select.form-control#cboxedAute( style='width: 200px;')
+                .col-md-4
+                  .form-inline
+                    .form-group
+                     if page=="admin" 
+                      label#lbledNomAuteur Nom :
+                  .form-inline
+                    .form-group
+                     if page=="admin"
+                      input.form-control#txtedNomAuteur(type="text", style='width: 200px;')
+                .col-md-4
+                  .form-inline
+                    .form-group
+                     if page=="admin" 
+                      label#lbledPreAuteur Prénom :
+                  .form-inline
+                    .form-group
+                     if page=="admin" 
+                      input.form-control#txtedPreAuteur(type="text", style='width: 200px;') 
+              hr
+              .row
+                .col-md-4
+                  .form-inline
+                    .form-group
+                     label#lbledEdit Éditeur :
+                     if page=="admin" 
+                      button#btnedaddEdit.btn-xs.btn-link(onclick="visualiserEditeurControls()",type="button",data-target="#blockEdit",  style='width:50px;') ( + )  
+                  .form-inline
+                    .form-group
+                     select.form-control#cboxedEdit( style='width: 200px;')  
+                .col-md-4
+                  .form-inline
+                    .form-group
+                     if page=="admin" 
+                      label#lbledNomEditeur Nom :
+                  .form-inline
+                    .form-group
+                     if page=="admin"
+                      input.form-control#txtedNomEditeur(type="text", style='width: 200px;') 
+                .col-md-4
+              .row
+               </br>
+                .col-md-4
+                  .form-inline
+                    .form-group
+                     if page=="admin"
+                      label#lbledVille Ville :
+                      button#btnedaddVill.btn-xs.btn-link(onclick="visualiserVilleControls()",type="button",data-target="#blockEdit",  style='width:50px;') ( + )
+                  .form-inline
+                    .form-group
+                     if page=="admin"
+                      select.form-control#cboxedVill( style='width: 200px;')    
+                //-
+                  .form-inline
+                    .form-group
+                     if page=="admin"
+                      label#lbledPays Pays :
+                  .form-inline
+                    .form-group
+                     if page=="admin"
+                      select.form-control#cboxedPays(onchange="loadVille()", style='width: 200px;')    
+                .col-md-4
+                  .form-inline
+                    .form-group
+                     if page=="admin"
+                      label#lbledaddVille Ajouter ville :
+                  .form-inline
+                    .form-group
+                     if page=="admin"
+                      input.form-control#txtedaddVille(type="text", style='width: 200px;')    
+                //-
+                  .form-inline
+                    .form-group
+                     if page=="admin"
+                      label#lbledVille Ville :
+                      button#btnedaddVill.btn-xs.btn-link(onclick="visualiserVilleControls()",type="button",data-target="#blockEdit",  style='width:50px;') ( + )
+                  .form-inline
+                    .form-group
+                     if page=="admin"
+                      select.form-control#cboxedVill( style='width: 200px;')
+                .col-md-4
+                //-
+                  .form-inline
+                    .form-group
+                     if page=="admin"
+                      label#lbledaddVille Ajouter ville :
+                  .form-inline
+                    .form-group
+                     if page=="admin"
+                      input.form-control#txtedaddVille(type="text", style='width: 200px;')     
+              hr
+              .row
+                .col-md-4
+                  .form-inline
+                    .form-group
+                      label#lbledAnne Année :
+                  .form-inline
+                    .form-group
+                      input.form-control#txtedAnne(type="number", style='width: 200px;')    
+                .col-md-4
+                  .form-inline
+                    .form-group
+                      label#lbledPrix Prix :
+                  .form-inline
+                    .form-group
+                      input.form-control#txtedPrix(type="number" step = "any", style='width: 170px;')
+                    .form-group
+                      a &nbsp;
+                      label CAD
+                .col-md-4
+                  .form-inline
+                    .form-group
+                      label#lbledLang Langue :
+                  .form-inline
+                    .form-group
+                      select.form-control#cboxedLang( style='width: 200px;') 
+              if page=="admin"          
+                hr
+                .row
+                  .col-md-4
+                    .form-inline
+                      .form-group
+                        label#lbledNume Numéro de page :
+                    .form-inline
+                      .form-group
+                        input.form-control#txtedNume(type="number", style='width: 200px;')   
+                  .col-md-4
+                    .form-inline
+                      .form-group
+                        label#lbledClas Classement :
+                        button#btnedaddClas.btn-xs.btn-link(onclick="visualiserClassementControls()",type="button",data-target="#blockEdit",  style='width:50px;') ( + )
+                    .form-inline
+                      .form-group
+                        select.form-control#cboxedClas( style='width: 200px;') 
+                  .col-md-4
+                    .form-inline
+                      .form-group
+                        label#lbledaddClas Ajouter classement :
+                    .form-inline
+                      .form-group
+                        input.form-control#txtedaddClas(type="text", style='width: 200px;')
+              hr
+              .row
+                .col-md-4
+                  .form-inline
+                    .form-group
+                      label#lbledEtat État :
+                  .form-inline
+                    .form-group
+                      select.form-control#cboxedEtat( style='width: 200px;') 
+                .col-md-4
+                    .form-inline
+                      .form-group
+                        label#lbledQuantite Quantité :
+                    .form-inline
+                      .form-group
+                        input.form-control#txtedQuantite(type="number", style='width: 200px;')
+                  
+                .col-md-4
+                
+              hr
+              .row
+                .col-md-4
+                  .form-inline
+                    .form-group
+                      label#lbledDona Donateur :
+
+                  .form-inline
+                    .form-group
+                      input.form-control#txtedDona(type="text", style='width: 200px;')
+                if page=="admin"  
+                 .col-md-4
+                  .form-inline
+                    .form-group
+                      label#lbledFami Famille :
+                      button#btnedaddFami.btn-xs.btn-link(onclick="visualiserFamilleControls()",type="button",data-target="#blockEdit",  style='width:50px;') ( + )
+
+                  .form-inline
+                    .form-group
+                      select.form-control#cboxedFami(style='width: 200px;')
+
+                 .col-md-4
+                  .form-inline
+                    .form-group
+                      label#lbledaddFami Ajouter famille :
+
+                  .form-inline
+                    .form-group
+                      input.form-control#txtedaddFami(type="text", style='width: 200px;')
+              .row
+              hr
+              .row
+                if page=="admin"
+                  .col-md-4
+                    .panel#PanelFichier.panel-uploader
+                      .form-inline
+                        .form-group
+                            label#lbledFich Fichier :
+                      .form-inline
+                        .form-group
+                          input.form-control#txtedFich(type="text", style='width: 200px;')
+                      .form-inline
+                        .form-group
+                          input.hide.hideform-control#txtedFich-hide(type="text", style='width: 200px;')        
+                  .col-md-4
+                    .panel#PanelChargerfichier
+                            hr
+                            //-.progress
+                              .progress-bar(role="progressbar", style="width: 0%;" ) %0
+                            button#upload-btn.btn.btn-info.upload-btn(type="button",style='width: 150px;') Charger fichier
+                            //-input#upload-input(type="file" name="uploads[]" multiple="multiple") 
+                            input#upload-input(type="file" name="uploads[]" accept="application/pdf")   
+                  .col-md-4
+                    .panel#PanelVisualiser.panel-visualiser
+                            hr
+                            //-button#visualiser-btn.btn.btn-info.visualiser-btn(type="button",style='width: 150px;', onclick="visualiserFiles()") Visualiser
+                            button#visualiser-btn.btn.btn-info.visualiser-btn(onclick="visualiserPdf()",type="button",style='width: 150px;',data-toggle="modal" data-target="#twoModalsExample") Visualiser  
+                
+                else
+                  .col-md-4
+                    .panel#PanelVisualiser.panel-uploader
+                      .form-inline
+                        .form-group
+                            label#lbledFich Fichier :
+                      .form-inline
+                        .form-group
+                          button#visualiser-btn.btn.btn-info.visualiser-btn(onclick="visualiserPdf()",type="button",style='width: 150px;',data-toggle="modal" data-target="#twoModalsExample") Visualiser
+                          input.form-control#txtedFich(type="hidden", style='width: 200px;')
+                          input.hide.form-control#txtedFich-hide(type="text", style='width: 200px;')     
+              .row
+                hr
+                .container
+                  .form-inline
+                    .form-group
+                     label#lbledComm Commentaire :
+                     a &nbsp; &nbsp; &nbsp;
+                  .form-inline
+                    .form-group 
+                     input.form-control#txtedComm(type="textarea" name="myTxtArea", style='width: 820px;' ) 
+                     a &nbsp; &nbsp; &nbsp;
+                      
+         .modal-footer
+                .container
+                  .row
+                    .col-md-4
+                      //-champ bide
+                    .col-md-4
+                      .form-inline
+                        .form-group
+                         a &nbsp; &nbsp; &nbsp;
+                         if page=="admin"
+                          button#btnftrCancel.btn.btn-info(type="button",data-dismiss="modal", style='width: 150px;') Annuler
+                         a &nbsp; &nbsp; &nbsp;
+                         if page=="admin"
+                          button#btnftrSave.btn.btn-info(type="button",style='width: 150px;', onclick="enregistrerDocument()") Enregistrer
+                          a &nbsp; &nbsp; &nbsp;
+                         if page=="public"
+                          button#btnftrFermer.btn.btn-info(type="button",data-dismiss="modal", style='width: 150px;') Fermer
+                          a &nbsp; &nbsp; &nbsp;
+                  .row 
+                    .col-md-4
+                      .form-inline
+                        .form-group
+                         if page=="admin"
+                          input#chBftrLoop(type="checkbox")
+                          a &nbsp; &nbsp; &nbsp;
+                          label#lblftrLoop Enregistrer et continuer une nouvelle saisie.
+                          a &nbsp; &nbsp; &nbsp;
+                      
+                    .col-md-4
+                    //-champ bide
+//- deuxième modal
+.modal.fade#twoModalsExample
+    .modal-dialog.modal-lg.modal-dialog-centered 
+      .modal-content#ModalContentpdf
+        .modal-header#ModalHeaderpdf
+          button.close(type="button",data-dismiss="modal") 
+                  span(aria-hidden="true") &times;
+                  span.sr-only Close
+          label#edTitleDeuxiemeModal Titre de pdf
+          //-input.form-control#edTitleDeuxiemeModal(type="text", style='width: 200px;')
+          //-h3#edTitleDeuxiemeModal.modal-title Information du document
+        .modal-body#ModalBodypdf
+          .container-fluid
+            .container
+              .row 
+                 a &nbsp; &nbsp; &nbsp;
+                 //-iframe#frame-pdf(src="uploads/Express.pdf",style='width: 800px; height :600px; zoom: 1;' )
+                 iframe#frame-pdf(style='width: 800px; height :600px; zoom: 1; scrolling="yes";' )
+              .row
+               a &nbsp; &nbsp; &nbsp;
+              .row   
+      //-
+        .modal-footer#ModalFooterpdf                    

@@ -1,0 +1,19 @@
+{
+  "type": "object",
+  "required": true,
+  "additionalProperties": false,
+  "properties": {
+    "nom": {
+      "type": "string",
+      "required": true
+    },
+    "adresse": {
+      "type": "string",
+      "required": true
+    },
+    "condition": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

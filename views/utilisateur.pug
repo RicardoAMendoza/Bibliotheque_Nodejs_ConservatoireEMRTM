@@ -1,0 +1,117 @@
+//-ConservatoireEMRTM.
+//-Langage de programmation : nodeJS (l'installation du framework Express est requis).
+//-Version 0.1
+//-Original author: Andy Del Risco & Ricardo Mendoza
+//-Released with the MIT License: http://www.opensource.org/licenses/mit-license.php
+//-Copyright (c) 2018 Andy Del Risco and Ricardo Mendoza
+//-Hiver-2018
+
+//-Begin Modal Utilisateurs
+.block-edit.modal.fade#blockUtilisateurs
+    .modal-dialog.modal-lg.modal-dialog-centered
+          .modal-content#ModalUtilisateurs
+            .modal-header
+              button.close(type="button",data-dismiss="modal") 
+                     span(aria-hidden="true") &times;
+                     span.sr-only Close
+              h3#UtilisateursTitle.modal-title Utilisateurs
+            .modal-body
+            .container-fluid
+              .row
+                  .table#tbuti_Result
+                    table#tableUti.table.table-hover.table-striped.table-bordered.table-responsive.display
+                      thead
+                        tr
+                          th#tbutiId ID
+                          th#tbutiPassword Mot de pass
+                          th#tbutiNom Nom
+                          th#tbutiPrenom Prénom      
+                          th#tbutiAdmin Admin
+                          th#tbutiInactif Inactif
+                          th.hide
+                      tbody#tbodyutiResult
+                      a &nbsp; &nbsp; &nbsp;    
+              .row
+                .col-md-4
+                  .form-inline
+                    .form-group
+                      a &nbsp; &nbsp; &nbsp;
+                      label#lblutiId ID :
+                  .form-inline
+                    .form-group
+                      a &nbsp; &nbsp; &nbsp;
+                      input.form-control#txtutiId(type="text" style='width: 200px;') 
+                .col-md-4
+                  .form-inline
+                    .form-group
+                      a &nbsp; &nbsp;
+                      label#lblutiNom Nom :
+                  .form-inline
+                    .form-group
+                      a &nbsp; &nbsp;
+                      input.form-control#txtutiNom(type="text", style='width: 200px;') 
+                .col-md-4
+                  .form-inline
+                    .form-group
+                      label#lblutiPrenom Prénom :
+                  .form-inline
+                    .form-group
+                      input.form-control#txtutiPrenom(type="text", style='width: 200px;')
+
+              .row
+                .col-md-4
+                  .form-inline
+                    .form-group
+                      a &nbsp; &nbsp; &nbsp;
+                      label#lblutiIdentifiant Mot de pass :
+                  .form-inline
+                    .form-group
+                      a &nbsp; &nbsp; &nbsp;
+                      input.form-control#txtutiMotdepass(type="text" style='width: 200px;') 
+                .col-md-4
+                  .form-inline
+                    .form-group
+                      a &nbsp; &nbsp;
+                      label#lblutiAdmin Admin :
+                  .form-inline
+                    .form-group
+                      a &nbsp; &nbsp;
+                      input.form-control#txtutiAdmin(type="number", style='width: 200px;') 
+                .col-md-4
+                  .form-inline
+                    .form-group
+                      label#lblutiInactif Inactif :
+                  .form-inline
+                    .form-group
+                      input.form-control#txtutiInactif(type="number", style='width: 200px;')        
+              hr
+            //-Modal Utilisateur
+            .modal-footer
+                .container
+                  .row
+                    .col-md-4
+                      .form-inline
+                        .form-group
+                          a &nbsp; &nbsp; &nbsp; &nbsp;
+                          button#btnutiNouveau.btn.btn-info(onclick="clairtxtBoxUti()",type="button", style='width: 150px;') Nouveau
+                          a &nbsp; &nbsp; &nbsp; &nbsp;
+                          button#btnutiSup.btn.btn-info(onclick="supprimerUtilisateurs()", type="button", style='width: 150px;' ) Supprimer
+                    .col-md-4
+                      .form-inline
+                        .form-group
+                          a &nbsp; &nbsp; &nbsp;
+                          button#btnutiSave.btn.btn-info(onclick="enregistrerUtilisateurs()", type="button", style='width: 150px;' ) Enregistrer
+                          a &nbsp; &nbsp; &nbsp;
+                          button#btnutiFermer.btn.btn-info(data-dismiss="modal", type="button", style='width: 150px;') Fermer
+                  .row   
+                    a &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;     
+                  .row 
+                    .col-md-4
+                      .form-inline
+                        .form-group
+                          input#chButiLoop(type="checkbox")
+                          a &nbsp; &nbsp; &nbsp;
+                          label#lblutiLoop Enregistrer et continuer une nouvelle saisie.
+                    .col-md-4
+                    //-champ bide
+                    //-End Modal Utilisateurs

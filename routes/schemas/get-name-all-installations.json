@@ -1,0 +1,15 @@
+{
+  "type": "array",
+  "required": true,
+  "installations": {
+    "type": "object",
+    "required": true,
+    "additionalProperties": false,
+    "properties": {
+      "nom": {
+        "type": "string",
+        "required": true
+      }
+    }
+  }
+}

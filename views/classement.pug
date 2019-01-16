@@ -1,0 +1,80 @@
+//-ConservatoireEMRTM.
+//-Langage de programmation : nodeJS (l'installation du framework Express est requis).
+//-Version 0.1
+//-Original author: Andy Del Risco & Ricardo Mendoza
+//-Released with the MIT License: http://www.opensource.org/licenses/mit-license.php
+//-Copyright (c) 2018 Andy Del Risco and Ricardo Mendoza
+//-Hiver-2018
+
+//-Begin Modal Classement
+.block-edit.modal.fade#blockClassement
+    .modal-dialog.modal-lg.modal-dialog-centered
+          .modal-content#ModalClssement
+            .modal-header
+              button.close(type="button",data-dismiss="modal") 
+                     span(aria-hidden="true") &times;
+                     span.sr-only Fermer
+              h3#classementTitle.modal-title Classement
+            .modal-body
+            .container-fluid
+              .row
+                  .table#tbcla_Result
+                    table#tableCla.table.table-hover.table-striped.table-bordered.table-responsive.display
+                      thead
+                        tr
+                          th#tbclaId ID
+                          th#tbclaClassement Classement
+                          th.hide
+                      tbody#tbodyclaResult
+                      a &nbsp; &nbsp; &nbsp;    
+              .row
+                .col-md-6
+                  .form-inline
+                    .form-group
+                      a &nbsp; &nbsp; &nbsp;
+                      label#lblclaId ID :
+                  .form-inline
+                    .form-group
+                      a &nbsp; &nbsp; &nbsp;
+                      input.form-control#txtclaId(type="text" style='width: 200px;') 
+                .col-md-6
+                  .form-inline
+                    .form-group
+                      a &nbsp; &nbsp;
+                      label#lblclaClassement Classement :
+                  .form-inline
+                    .form-group
+                      a &nbsp; &nbsp;
+                      input.form-control#txtclaClassement(type="text", style='width: 200px;')  
+              hr
+              //-Modal Classement
+            .modal-footer
+                .container
+                  .row
+                    .col-md-4
+                      .form-inline
+                        .form-group
+                          a &nbsp; &nbsp; &nbsp; &nbsp;
+                          button#btnclaNouveau.btn.btn-info(type="button", style='width: 150px;', onclick="clairtxtBoxCla()") Nouveau
+                          a &nbsp; &nbsp; &nbsp; &nbsp;
+                          button#btnclaSup.btn.btn-info(type="button",style='width: 150px;', onclick="supprimerClassement()") Supprimer
+
+                    .col-md-4
+                      .form-inline
+                        .form-group
+                          a &nbsp; &nbsp; &nbsp;                      
+                          button#btnclaSave.btn.btn-info(type="button",style='width: 150px;', onclick="enregistrerClassement()") Enregistrer
+                          a &nbsp; &nbsp; &nbsp;
+                          button#btnclaFermer.btn.btn-info(type="button",data-dismiss="modal", style='width: 150px;') Fermer
+                  .row   
+                    a &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;     
+                  .row 
+                    .col-md-4
+                      .form-inline
+                        .form-group
+                          input#chBclaLoop(type="checkbox")
+                          a &nbsp; &nbsp; &nbsp;
+                          label#lblclaLoop Enregistrer et continuer une nouvelle saisie.
+                    .col-md-4
+                    //-champ bide
+                    //-End Modal Classement

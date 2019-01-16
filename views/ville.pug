@@ -1,0 +1,91 @@
+//-ConservatoireEMRTM.
+//-Langage de programmation : nodeJS (l'installation du framework Express est requis).
+//-Version 0.1
+//-Original author: Andy Del Risco & Ricardo Mendoza
+//-Released with the MIT License: http://www.opensource.org/licenses/mit-license.php
+//-Copyright (c) 2018 Andy Del Risco and Ricardo Mendoza
+//-Hiver-2018
+
+//-Begin Modal Ville
+.block-edit.modal.fade#blockVille
+    .modal-dialog.modal-lg.modal-dialog-centered
+          .modal-content#ModalVille
+            .modal-header
+              button.close(type="button",data-dismiss="modal") 
+                     span(aria-hidden="true") &times;
+                     span.sr-only Fermer
+              h3#villeTitle.modal-title Villes
+            .modal-body
+            .container-fluid
+              .row
+                  .table#tbvil_Result
+                    table#tableVil.table.table-hover.table-striped.table-bordered.table-responsive.display
+                      thead
+                        tr
+                          th#tbvilId ID
+                          th#tbvilNomville Ville
+                          //-th#tbvilNompays Pays
+                          //-th#tbvilcodepays.hide Code Pays
+                          //-th.hide
+                      tbody#tbodyvilResult
+                      a &nbsp; &nbsp; &nbsp;    
+              .row
+                .col-md-6
+                  .form-inline
+                    .form-group
+                      a &nbsp; &nbsp; &nbsp;
+                      label#lblvilId ID :
+                  .form-inline
+                    .form-group
+                      a &nbsp; &nbsp; &nbsp;
+                      input.form-control#txtvilId(type="number" style='width: 200px;') 
+                .col-md-6
+                  .form-inline
+                    .form-group
+                      a &nbsp; &nbsp;
+                      label#lblvilNomville Ville :
+                  .form-inline
+                    .form-group
+                      a &nbsp; &nbsp;
+                      //-select.form-control#cboxvilNomville(style='width: 200px;')
+                      input.form-control#txtvilNomville( type="text", style='width: 200px;')
+              //-
+                .col-md-4
+                  .form-inline
+                    .form-group
+                      label#lblvilcodepays Pays :
+                  .form-inline
+                    .form-group
+                      select.form-control#cboxvilNompays( style='width: 200px;')
+                      //-input.form-control#txtvilNompays(type="text", style='width: 200px;')
+              hr
+            //-Modal Ville
+            .modal-footer
+                .container
+                  .row
+                    .col-md-4
+                      .form-inline
+                        .form-group
+                          a &nbsp; &nbsp; &nbsp; &nbsp;
+                          button#btnvilNouveau.btn.btn-info(onclick="clairtxtBoxVil()",type="button", style='width: 150px;') Nouveau
+                          a &nbsp; &nbsp; &nbsp; &nbsp;
+                          button#btnvilSup.btn.btn-info(type="button",style='width: 150px;', onclick="supprimerVille()") Supprimer
+                    .col-md-4
+                      .form-inline
+                        .form-group
+                          button#btnvilSave.btn.btn-info(type="button",style='width: 150px;', onclick="enregistrerVille()") Enregistrer
+                          a &nbsp; &nbsp; &nbsp;
+                          button#btnvilFermer.btn.btn-info(type="button",data-dismiss="modal", style='width: 150px;') Fermer
+                          a &nbsp; &nbsp; &nbsp;
+                  .row   
+                    a &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;     
+                  .row 
+                    .col-md-4
+                      .form-inline
+                        .form-group
+                          input#chBvilLoop(type="checkbox")
+                          a &nbsp; &nbsp; &nbsp;
+                          label#lblvilLoop Enregistrer et continuer une nouvelle saisie.
+                    .col-md-4
+                    //-champ bide
+                    //-End Modal Ville

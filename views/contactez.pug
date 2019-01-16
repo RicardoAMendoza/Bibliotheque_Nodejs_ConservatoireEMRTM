@@ -1,0 +1,155 @@
+//-ConservatoireEMRTM.
+//-Langage de programmation : nodeJS (l'installation du framework Express est requis).
+//-Version 0.1
+//-Original author: Andy Del Risco & Ricardo Mendoza
+//-Released with the MIT License: http://www.opensource.org/licenses/mit-license.php
+//-Copyright (c) 2018 Andy Del Risco and Ricardo Mendoza
+//-Hiver-2018
+
+//-Begin Modal Contactez
+.block-edit.modal.fade#blockContactez
+    .modal-dialog.modal-lg.modal-dialog-centered
+          .modal-content#ModalContactez
+            .modal-header
+              button.close(type="button",data-dismiss="modal") 
+                     span(aria-hidden="true") &times;
+                     span.sr-only Close
+              h3#nousjoindreTitle.modal-title Nous joindre
+            .modal-body
+               .row
+                .col-sm-1
+                .col-sm-2
+                  img(src="img/logo.png" , style='width: 100px;')
+                .col-sm-6
+                  h3 
+            .container-fluid
+              //- Interface Body
+             
+              .row
+                .col-md-4   
+                  .form-inline
+                    .form-group
+                      a &nbsp; &nbsp; &nbsp; &nbsp;
+                      label.hide#lbljoiId ID :
+                  .form-inline
+                    .form-group
+                      a &nbsp; &nbsp; &nbsp; &nbsp;
+                      input.hide.form-control#txtjoiId(type="number" style='width: 210px;') 
+                .col-md-4
+                .col-md-4      
+              .row       
+                .col-md-12
+                  .form-inline
+                    .form-group
+                      a &nbsp; &nbsp; &nbsp; &nbsp;
+                      label.hide#lbljoiEntreprise Entreprise :
+                  .form-inline
+                    .form-group
+                      a &nbsp; &nbsp; &nbsp; &nbsp;
+                      label#lbljoiMEntreprise Entreprise :
+                      //- input.form-control#txtjoiEntreprise(type="text", style='width: 800px;') 
+              .row   
+                a &nbsp; &nbsp; &nbsp; &nbsp;   
+              .row
+                .col-md-4
+                  .form-inline
+                    .form-group
+                      a &nbsp; &nbsp; &nbsp; &nbsp;
+                      label#lbljoiContact Contact :
+                  .form-inline
+                    .form-group
+                      a &nbsp; &nbsp; &nbsp; &nbsp;
+                      label#lbljoiMContact Contact :
+                      //- input.form-control#txtjoiContact(type="text", style='width: 210px;')
+                .col-md-4
+                  .form-inline
+                    .form-group
+                      a &nbsp; &nbsp; &nbsp; &nbsp;
+                      label#lbljoiCourriel Courriel :
+                  .form-inline
+                    .form-group
+                      a &nbsp; &nbsp; &nbsp; &nbsp;
+                      label#lbljoiMCourriel Courriel :
+                      //-input.form-control#txtjoiCourriel(type="text" style='width: 210px;') 
+                .col-md-4
+                  .form-inline
+                    .form-group
+                      a &nbsp; &nbsp; &nbsp;
+                      label#lbljoiTelephone Telephone :
+                  .form-inline
+                    .form-group
+                      a &nbsp; &nbsp; &nbsp;
+                      label#lbljoiMTelephone Telephone :
+                      //-input.form-control#txtjoiTelephone(type="text", style='width: 210px;')
+                .col-md-4
+              .row
+                .container
+                  .form-inline
+                    .form-group
+                      a &nbsp; &nbsp; &nbsp; &nbsp;
+                      label.hide#lbljoiAdresse Adresse :
+                  .form-inline
+                    .form-group
+                      a &nbsp; &nbsp; &nbsp; &nbsp;
+                      label#lbljoiMAdresse Adresse :
+                      //-input.form-control#txtjoiAdresse(type="text", style='width: 800px;')
+
+              //- map        
+              .row
+                a &nbsp; &nbsp; &nbsp; &nbsp;
+                .container
+                  .col-md-12
+                   a &nbsp; &nbsp; &nbsp; &nbsp;
+                   p @google map
+                    a &nbsp; &nbsp; &nbsp; &nbsp;
+                    .map#mapNj
+
+              .row        
+              a &nbsp; &nbsp; &nbsp;
+              .row
+                .container
+                  .form-inline
+                    .form-group
+                      a &nbsp; &nbsp; &nbsp;
+                      label.hide#lbljoiCommentaire Commentaire :
+                  .form-inline
+                    .form-group
+                      a &nbsp; &nbsp; &nbsp;
+                      label#lbljoiMCommentaire Commentaire :
+                      //-input.form-control#txtjoiCommentaire(type="text", style='width: 800px;')        
+              hr
+            //-Modal Preferences
+          
+            .modal-footer
+                .container
+                  .row
+                    .col-md-4
+                      .form-inline
+                        .form-group
+                        //-
+                          a &nbsp; &nbsp; &nbsp; &nbsp;
+                          button#btnpreNouveau.btn.btn-info(onclick="clairtxtBoxPre()",type="button", style='width: 150px;') Nouveau
+                          a &nbsp; &nbsp; &nbsp; &nbsp;
+                          button#btnpreSup.btn.btn-info(onclick="supprimerPreferences()", type="button", style='width: 150px;' ) Supprimer
+                    .col-md-4
+                      .form-inline
+                        .form-group
+                          a &nbsp; &nbsp; &nbsp;
+                          button#btnpreFermer.btn.btn-info(data-dismiss="modal", type="button", style='width: 150px;') Fermer
+                        //-
+                          a &nbsp; &nbsp; &nbsp;
+                          button#btnpreSave.btn.btn-info(onclick="enregistrerPreferences()", type="button", style='width: 150px;' ) Enregistrer
+                  .row   
+                    a &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;     
+                  .row 
+                    .col-md-4
+                      .form-inline
+                        .form-group
+                        //-
+                          input#chBpreLoop(type="checkbox")
+                          a &nbsp; &nbsp; &nbsp;
+                          label#lblpreLoop Enregistrer et continuer une nouvelle saisie.
+                    .col-md-4
+                    //-champ bide
+                    //-End Modal Preferences
+

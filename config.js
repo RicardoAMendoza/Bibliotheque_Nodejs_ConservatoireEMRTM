@@ -7,7 +7,6 @@
  * Copyright (c) 2018 Andy Del Risco and Ricardo Mendoza
  * Hiver-2018
  */
-
 var config = {
 	app: {
 		port: 3000
@@ -24,15 +23,13 @@ var config = {
 
 	taches: {
 		horaire: '0 0 * * *', //pour avoir plus de détail: www.npmjs.com/package/cron
-		message: "Tâche d'importation de données de la ville de Montréal"
+		message: "Tâche d'importation de données"
 	},
 	erreur: {
 		message400: "Requête invalide, vérifier le(s) paramètre(s) du service.",
 		message404: "La ressource n'existe pas ou n'est pas disponible.",
 		messageApp: "Erreur dans l'application"
 	}	
-
 };
-
 module.exports = config;
 

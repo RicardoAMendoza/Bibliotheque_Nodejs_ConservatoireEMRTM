@@ -103,8 +103,8 @@ module.exports = config;
  
  ## Auteurs
 
-* **Andy Del Risco Manzanares** - *Analyste programmeur senior* 
-* **Ricardo Mendoza** - *Analyste Programmeur Jr* 
+* **[Andy Del Risco Manzanares](https://www.linkedin.com/in/andydelriscomanzanares/)** - *Analyste programmeur senior* 
+* **[Ricardo Mendoza](https://www.linkedin.com/in/ricardo-mendoza-b8769849/)** - *Analyste Programmeur Jr*
  
  
 ## Exécuter le test

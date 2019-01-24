@@ -1,6 +1,6 @@
 # Gestion des livres du conservatoire culinaire.
 
-## BIBLIOTHÈQUE ConservatoireEMRTM
+## BIBLIOTHÈQUE CONSERVATOIRE EMRTM
 
 ## Nom du projet : prjNodejs_ConservatoireEMRTM
 
@@ -17,11 +17,10 @@ Application pour la gestion des livres de cuisine dans le conservatoire, disponi
 
 ### Préalables
 
- * Framework Express.
  * Langage de programmation : nodeJS (l'installation du framework Express est requis), JQuery, Javascript.
  * MySQL Workbench 6.3 - base de données
  * Programming language : MySQL.
- * npm install
+ * npm - * npm is distributed with Node.js- which means that when you download Node.js, you automatically get npm installed on your computer. *
  * MVC Concepts.
  
 
@@ -29,12 +28,17 @@ Application pour la gestion des livres de cuisine dans le conservatoire, disponi
 
 ### Télécharger et installer. 
 
- * Framework Express.
  * [Installer MySQL Workbench](https://www.mysql.com/fr/products/workbench/)
- * npm install
- * Visual Studio Code.
+ * [Nodejs](https://nodejs.org/en/download/) - * npm is distributed with Node.js- which means that when you download Node.js, you automatically get npm installed on your computer. *
+ * [Visual Studio Code](https://code.visualstudio.com/)
+ * [Framework Express] (https://www.npmjs.com/package/express)
  
+ 
+ ### GIF
+ 
+ * [Capture d'écran animée](https://www.cockos.com/licecap/)
 
+ 
 ### Créer la base de données avec MySQL Workbench.
 
 1.- Créez la base de données: ouvrez MySQL Workbench, ouvrez une nouvelle query et exécutez MySQL/1_init_DataBase.sql
@@ -67,6 +71,7 @@ Application pour la gestion des livres de cuisine dans le conservatoire, disponi
  * Copyright (c) 2018 Andy Del Risco and Ricardo Mendoza
  * Hiver-2018
  */
+ 
 var config = {
 	app: {
 		port: 3000
@@ -109,6 +114,7 @@ module.exports = config;
  
 ## Exécuter le test
  
+ 
 ### Les informations d'un document original dans le conservatoire,
 
 ![Livre original](/img/conserves.jpg "Livre original")
@@ -120,17 +126,14 @@ module.exports = config;
 ![Interface admin](/img/admin.jpg "Interface admin")
 
 
-
 ### Ils sont disponibles pour consultation publique.
 
 ![Enregistrer les informations et le document](/img/saveDocument.jpg "Info")
 
 
-
 ### Le document peut être téléchargé en format PDF.
 
 ![Document dans le système](/img/document.jpg "Documents")
-
 
 
 ## Pour commencer
@@ -164,6 +167,12 @@ git pull
 
 ## Technologies utilisées :
 
+* Langage de programmation : nodeJS (l'installation du framework Express est requis), JQuery, Javascript.
+ * MySQL Workbench 6.3 - base de données
+ * Programming language : MySQL.
+ * npm - * npm is distributed with Node.js- which means that when you download Node.js, you automatically get npm installed on your computer. *
+ * MVC Concepts.
+
  * Frame Express.
  * npm
  * MySQL Workbench 6.3 - base de données.
@@ -171,17 +180,18 @@ git pull
 Front-end:
 * Pug
 * Bootstrap 3.3.2
+* CSS
 * Datatables (https://datatables.net) 
 * JQuery
+* Javascript
 * HTML5
 
 Back-end:
 * Node.js 8.6
-* express.js 4
-* node-cron
-* raml2html
-
-
+* npm
+* Frame work express.js 4
+* MySQL Workbench 6.3
+* Javascript
 
 
 ## Versions et gestionnaire de source 

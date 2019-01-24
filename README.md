@@ -2,7 +2,7 @@
 
 ## BIBLIOTHÈQUE ConservatoireEMRTM
 
-## Nom du projet : prjNodeJs_Bibliotheque_Nodejs_ConservatoireEMRTM
+## Nom du projet : prjNodejs_ConservatoireEMRTM
 
 Hiver-2018
 

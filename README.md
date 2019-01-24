@@ -29,9 +29,9 @@ Application pour la gestion des livres de cuisine dans le conservatoire, disponi
 ### Télécharger et installer. 
 
  * [Installer MySQL Workbench](https://www.mysql.com/fr/products/workbench/)
- * [Nodejs](https://nodejs.org/en/download/) - * npm is distributed with Node.js- which means that when you download Node.js, you automatically get npm installed on your computer. *
+ * [Nodejs](https://nodejs.org/en/download/) - *npm is distributed with Node.js- which means that when you download Node.js, you automatically get npm installed on your computer.*
  * [Visual Studio Code](https://code.visualstudio.com/)
- * [Framework Express] (https://www.npmjs.com/package/express)
+ * [Framework Express](https://www.npmjs.com/package/express)
  
  
  ### GIF

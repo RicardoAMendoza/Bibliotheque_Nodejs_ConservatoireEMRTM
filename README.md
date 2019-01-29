@@ -115,15 +115,17 @@ module.exports = config;
 ## Exécuter le test
  
  
-### Les informations d'un document original dans le conservatoire,
+### Document original
 
 ![Livre original](/img/conserves.jpg "Livre original")
 
 
 
-### sont enregistrés dans la base de données de l'application.
+### Les informations d'un document original dans le conservatoire sont enregistrés dans la base de données de l'application.
 
 ![Interface admin](/img/admin.jpg "Interface admin")
+
+![Interface admin](/img/informationsGIF.gif "Interface admin")
 
 
 ### Ils sont disponibles pour consultation publique.

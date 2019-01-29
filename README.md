@@ -141,6 +141,12 @@ module.exports = config;
 ![Fonctionnalités](/img/fonctionnalitesGIF.gif "Fonctionnalités")
 
 
+### L'application aussi a des fonctionnalités pour la gestion : Exporter, Nouveau, Gestion.
+
+![Gestion](/img/gestionGIF.gif "Gestion")
+
+
+
 ## Pour commencer
 
 Dans la racine de ce projet se trouve un fichier config.js contenant les paremètres globaux de notre application, comme les paramètres de notre connexion à la base de données, le port de notre application, les messages d'erreurs du back-end, etc.

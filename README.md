@@ -125,8 +125,6 @@ module.exports = config;
 
 ![Interface admin](/img/admin.jpg "Interface admin")
 
-![Interface admin](/img/informationsGIF.gif "Interface admin")
-
 
 ### Ils sont disponibles pour consultation publique.
 
@@ -135,7 +133,12 @@ module.exports = config;
 
 ### Le document peut être téléchargé en format PDF.
 
-![Document dans le système](/img/document.jpg "Documents")
+![Interface admin](/img/informationsGIF.gif "Interface admin")
+
+
+### L'application a des fonctionnalités : A propos de nous, Nous joindre et Galerie.
+
+![Fonctionnalités](/img/fonctionnalitesGIF.gif "Fonctionnalités")
 
 
 ## Pour commencer
